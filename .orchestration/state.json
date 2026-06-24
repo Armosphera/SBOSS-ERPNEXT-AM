@@ -259,14 +259,14 @@
       "status": "pending"
     },
     "W1-T01": {
-      "branch": null,
+      "branch": "feat/w1/t01",
       "claimed_at": "2026-06-24T14:01:34.916649+00:00",
-      "commit": null,
-      "completed_at": null,
+      "commit": "e6e0aaf",
+      "completed_at": "2026-06-24T18:00:00Z",
       "id": "W1-T01",
       "owner": "claude-code",
-      "pr": null,
-      "status": "claimed"
+      "pr": 1,
+      "status": "done"
     },
     "W1-T02": {
       "branch": null,
@@ -289,14 +289,14 @@
       "status": "pending"
     },
     "W1-T04": {
-      "branch": null,
+      "branch": "feat/w1/t04",
       "claimed_at": "2026-06-24T17:56:07.169076+00:00",
-      "commit": null,
-      "completed_at": null,
+      "commit": "6efa406",
+      "completed_at": "2026-06-24T18:00:00Z",
       "id": "W1-T04",
       "owner": "agent-W1a",
-      "pr": null,
-      "status": "claimed"
+      "pr": 3,
+      "status": "done"
     },
     "W1-T05": {
       "branch": null,
@@ -709,14 +709,14 @@
       "status": "pending"
     },
     "W2-T04": {
-      "branch": null,
+      "branch": "feat/w2/t04",
       "claimed_at": "2026-06-24T17:56:07.220982+00:00",
-      "commit": null,
-      "completed_at": null,
+      "commit": "e524102",
+      "completed_at": "2026-06-24T18:00:00Z",
       "id": "W2-T04",
       "owner": "agent-W2a",
-      "pr": null,
-      "status": "claimed"
+      "pr": 4,
+      "status": "done"
     },
     "W2-T05": {
       "branch": null,

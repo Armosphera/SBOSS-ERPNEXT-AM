@@ -38,6 +38,8 @@ are typically tracked under liabilities in Armenian accounting practice).
 """
 from collections import Counter
 
+import frappe
+
 
 # ---------------------------------------------------------------------------
 # COA data
@@ -1621,5 +1623,27 @@ def seed_armenian_coa(company: str) -> int:
             doc.parent_account = by_num[parent_num]
         doc.insert(ignore_permissions=True, ignore_mandatory=True)
         by_num[num] = doc.name
+        # Persist the Armenian (HY) name via the bilingual helper if the
+        # account has one in the tree and the custom field is registered.
+        hy_name = entry.get("account_name_hy")
+        if hy_name:
+            set_hy_account_name(doc.name, hy_name)
         created += 1
     return created
+
+
+def set_hy_account_name(account_name: str, account_name_hy: str) -> None:
+    """Persist the Armenian (HY) account name on an existing Account.
+
+    Used by the COA seeder after insert, and by tests. Uses `db_set` to
+    avoid the full validate/save round-trip (we know the doc is valid;
+    we just need to update one custom field).
+    """
+    if not account_name_hy:
+        return
+    frappe.db.set_value(
+        "Account",
+        account_name,
+        "account_name_hy",
+        account_name_hy,
+    )

@@ -5,6 +5,13 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
+
+# Backwards-compatibility window: localization apps MUST work against the last 3
+# minor versions of ERPNext v15.x. See docs/architecture.md "Upstream-
+# survivability contract" (operator requirement 2026-06-24).
+env:
+  ERPNEXT_PINS: "15.3.0,15.2.0,15.1.0"
 
 jobs:
   verify-isolation:
@@ -30,6 +37,38 @@ jobs:
           fi
       - name: Portfolio drift check
         run: node tools/check-portfolio-drift.js
+
+  bench-matrix:
+    name: ERPNext ${{ matrix.pin }} compatibility
+    runs-on: ubuntu-latest
+    needs: verify-isolation
+    strategy:
+      fail-fast: false
+      matrix:
+        pin: ${{ fromJson(env.ERPNEXT_PINS) }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set Python
+        uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Boot bench + ERPNext ${{ matrix.pin }} in Docker
+        run: |
+          docker compose -f infra/compose/ci.yml up -d
+          # Wait for the bench init to complete
+          docker compose -f infra/compose/ci.yml logs -f bench-init | head -200
+        env:
+          ERPNEXT_PIN: ${{ matrix.pin }}
+      - name: Install localization apps
+        run: |
+          docker compose -f infra/compose/ci.yml exec -T bench \
+            bench --site test.localhost install-app frappe_armenia frappe_uae frappe_ai_local
+      - name: Run full test suite
+        run: |
+          docker compose -f infra/compose/ci.yml exec -T bench \
+            bench --site test.localhost run-tests --app frappe_armenia,frappe_uae,frappe_ai_local
+      - name: Tear down
+        if: always()
+        run: docker compose -f infra/compose/ci.yml down -v
 
   portfolio-drift:
     name: Repo set matches expected-repos.json

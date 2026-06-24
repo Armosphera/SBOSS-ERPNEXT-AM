@@ -1,0 +1,27 @@
+services:
+  mariadb:
+    image: mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+    tmpfs:
+      - /var/lib/mysql
+
+  redis:
+    image: redis:7-alpine
+
+  bench-init:
+    build:
+      context: ../..
+      dockerfile: infra/docker/ci.Dockerfile
+      args:
+        ERPNEXT_PIN: ${ERPNEXT_PIN:-15.3.0}
+    image: sboss-ci:${ERPNEXT_PIN:-15.3.0}
+    depends_on:
+      - mariadb
+      - redis
+    environment:
+      BENCH_PATH: /workspace
+      ERPNEXT_PIN: ${ERPNEXT_PIN:-15.3.0}
+    command: ["/usr/local/bin/bench-init"]
+    volumes:
+      - ../..:/workspace

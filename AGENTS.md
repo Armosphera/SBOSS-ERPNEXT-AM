@@ -20,6 +20,14 @@ Two shared libraries under `libs/` (MIT):
 
 ## Ground rules (READ THESE — VIOLATIONS BREAK THE BUILD)
 
+0. **Upstream-survivability is a hard requirement.** ERPNext ships updates
+   continuously. Our localization apps must keep working after every upstream
+   update without operator intervention. The mechanism is: link to upstream's
+   public API only, run the W6 weekly sync, fix breakages in wrapper layers
+   (`libs/`), never edit upstream code. See `docs/architecture.md` → "Upstream-
+   survivability contract". An operator can trigger `bench update && bash
+   infra/scripts/sync-upstream.sh test` at any time and expect tests to pass.
+
 1. **NEVER modify anything under `apps/frappe_armenia/erpnext/`, `apps/frappe_armenia/frappe/`, `apps/frappe_armenia/hrms/`, or the equivalent paths in `frappe_uae` / `frappe_ai_local`.** These are upstream references. If you think upstream needs a change, file an issue in the W6 upstream-sync workstream — do not edit.
 
 2. **NEVER make a PR that touches files outside your claimed task's `globs`.** The CI runs `tools/swarm/verify-isolation.py` and will fail the build.

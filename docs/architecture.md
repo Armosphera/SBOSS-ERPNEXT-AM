@@ -174,10 +174,52 @@ a new function or optional kwarg is MINOR.
 ## Versioning policy
 
 - We pin against a specific **ERPNext minor version** (e.g. `v15.3.0`).
-- W6 upstream-sync runs weekly, opens PRs to update the pin.
+- W6 upstream-sync runs **weekly**, opens PRs to update the pin.
 - We do NOT track `develop` directly — that is unstable.
 - A pin bump is a release; we run the full test suite + a 1-day staging
   deployment in the UAE staging tenant before shipping.
+
+## Upstream-survivability contract (operator requirement, 2026-06-24)
+
+**The localization modules MUST keep working after every upstream ERPNext
+update.** This is a hard requirement, not a stretch goal. Concretely:
+
+1. **No edits to upstream code.** The localization apps **link** to Frappe /
+   ERPNext / HRMS via their public Python API and hooks. They never monkey-
+   patch, never `git pull` upstream into our repo, never import private
+   internals. If we need a feature that doesn't exist upstream, we **wrap**
+   the API in `libs/frappe_localization_core` so the wrapper is the only
+   thing we have to update.
+
+2. **W6 weekly sync is mandatory.** Every Monday 04:00 UTC, CI:
+   - Detects new `v15.x` tags in `frappe/frappe`, `frappe/erpnext`,
+     `frappe/hrms`.
+   - Bumps the pin in each app's `pyproject.toml`.
+   - Runs the full unit + integration test suite.
+   - If green, opens a PR with the new pin. If red, opens a
+     `upstream-breakage` issue with the failing test list and tags the
+     workstream owner.
+   - Posts to Slack/Telegram webhook.
+
+3. **Operator can trigger a sync on demand.** `Actions → Upstream Sync →
+   Run workflow` (manual `workflow_dispatch`) is wired. So is the CLI
+   equivalent: `bash infra/scripts/sync-upstream.sh open-pr` from a
+   maintenance shell.
+
+4. **Backwards-compatibility window.** Localization apps MUST work against
+   the **last 3 minor versions** of ERPNext. So a customer on `v15.1.0`
+   is supported when we ship against `v15.4.0`. This is enforced by a CI
+   matrix in `unit-tests.yml` that runs the suite against multiple ERPNext
+   pins.
+
+5. **Rollback is one click.** Because we never modify upstream, rolling
+   back to a previous ERPNext version is just `bench update --reset` plus
+   pinning the old `pyproject.toml` constraint. We do not ship schema
+   migrations that touch upstream tables.
+
+6. **What if an upstream change breaks us anyway?** The W6 sync catches
+   it within 7 days. The breakage is fixed in the wrapper layer, not in
+   our app logic. A patch release ships within 48h of detection.
 
 ## Hosting topology
 

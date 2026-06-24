@@ -1,0 +1,75 @@
+services:
+  mariadb:
+    image: mariadb:10.6
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p123"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  bench:
+    build:
+      context: ../..
+      dockerfile: infra/docker/dev.Dockerfile
+    image: sboss-dev:latest
+    restart: unless-stopped
+    depends_on:
+      mariadb: { condition: service_healthy }
+      redis:   { condition: service_healthy }
+    environment:
+      BENCH_PATH: /workspace
+    ports:
+      - "8000:8000"   # Frappe web
+      - "9000:9000"   # Socket.IO
+      - "11434:11434" # Ollama
+    volumes:
+      - ..:/workspace
+      - bench-data:/workspace/frappe-bench
+    command: >
+      bash -c "
+        bench-init &&
+        bench start"
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    volumes:
+      - ollama-data:/root/.ollama
+    # 4B model runs fine on CPU; uncomment for GPU:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  ollama-pull:
+    image: curlimages/curl:latest
+    depends_on:
+      - ollama
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+      "until curl -s http://ollama:11434/api/version >/dev/null; do sleep 2; done &&
+       echo '==> Pulling gemma4:4b (Gemma 4 4B GGUF)' &&
+       curl -X POST http://ollama:11434/api/pull -d '{\"name\":\"gemma4:4b\"}' &&
+       echo 'done'"
+
+volumes:
+  mariadb-data:
+  bench-data:
+  ollama-data:

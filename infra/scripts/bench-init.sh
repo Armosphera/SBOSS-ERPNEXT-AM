@@ -9,18 +9,18 @@ cd "$WORKSPACE"
 
 # 1. Initialize bench if not present
 if [[ ! -d "frappe-bench" ]]; then
-  echo "==> Initializing bench (ERPNext v15.x stable)"
+  echo "==> Initializing bench (Frappe v15.3.0)"
   bench init --frappe-branch v15.3.0 --python python3.11 frappe-bench
 fi
 
-cd frappe-bench
+cd "$WORKSPACE/frappe-bench"
 
-# 2. Configure MariaDB for local dev (uses the mariadb container)
-bench set-config -p db_host mariadb
-bench set-config -p redis_cache redis://redis:6379
-bench set-config -p redis_queue redis://redis:6379
-bench set-config -p redis_socketio redis://redis:6379
-bench set-config -p socketio_port 9000
+# 2. Configure MariaDB + Redis to point at the compose services
+bench set-config -p db_host mariadb || true
+bench set-config -p redis_cache redis://redis:6379 || true
+bench set-config -p redis_queue redis://redis:6379 || true
+bench set-config -p redis_socketio redis://redis:6379 || true
+bench set-config -p socketio_port 9000 || true
 
 # 3. Get ERPNext + HRMS
 if [[ ! -d "apps/erpnext" ]]; then
@@ -32,22 +32,23 @@ if [[ ! -d "apps/hrms" ]]; then
   bench get-app hrms --branch v15.0.0
 fi
 
-# 4. Get our 3 localization apps from this monorepo
+# 4. Get our 3 localization apps from this monorepo.
+# Use --resolve to avoid asking interactively; apps are local (not from git).
 if [[ ! -d "apps/frappe_armenia" ]]; then
   echo "==> Getting frappe_armenia (local)"
-  bench get-app /workspace/apps/frappe_armenia
+  bench get-app /workspace/apps/frappe_armenia --resolve
 fi
 if [[ ! -d "apps/frappe_uae" ]]; then
   echo "==> Getting frappe_uae (local)"
-  bench get-app /workspace/apps/frappe_uae
+  bench get-app /workspace/apps/frappe_uae --resolve
 fi
 if [[ ! -d "apps/frappe_ai_local" ]]; then
   echo "==> Getting frappe_ai_local (local)"
-  bench get-app /workspace/apps/frappe_ai_local
+  bench get-app /workspace/apps/frappe_ai_local --resolve
 fi
 
-# 5. Install shared libs
-if [[ ! -d "/workspace/.libs-installed" ]]; then
+# 5. Install shared libs (one-time)
+if [[ ! -f "/workspace/.libs-installed" ]]; then
   echo "==> Installing shared libs (MIT)"
   pip install -e /workspace/libs/frappe_localization_core
   pip install -e /workspace/libs/frappe_payroll_engine

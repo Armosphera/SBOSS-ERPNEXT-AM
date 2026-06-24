@@ -1,0 +1,1 @@
+frappe_armenia.patches.v0_1.seed_armenian_coa

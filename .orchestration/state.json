@@ -260,13 +260,13 @@
     },
     "W1-T01": {
       "branch": null,
-      "claimed_at": "2026-06-24T11:11:32.308715+00:00",
+      "claimed_at": "2026-06-24T14:01:34.916649+00:00",
       "commit": null,
-      "completed_at": "2026-06-24T11:11:50.413326+00:00",
+      "completed_at": null,
       "id": "W1-T01",
-      "owner": "agentA",
-      "pr": 1,
-      "status": "done"
+      "owner": "claude-code",
+      "pr": null,
+      "status": "claimed"
     },
     "W1-T02": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-24T11:28:59.426579+00:00",
+  "updated_at": "2026-06-24T14:01:34.916871+00:00",
   "version": "0.0.1-foundation"
 }

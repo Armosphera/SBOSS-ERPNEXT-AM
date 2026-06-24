@@ -680,10 +680,570 @@
     },
     "W2-T01": {
       "branch": null,
+      "claimed_at": "2026-06-24T11:28:59.254756+00:00",
+      "commit": null,
+      "completed_at": "2026-06-24T11:28:59.426281+00:00",
+      "id": "W2-T01",
+      "owner": "tester",
+      "pr": 1,
+      "status": "done"
+    },
+    "W2-T02": {
+      "branch": null,
       "claimed_at": null,
       "commit": null,
       "completed_at": null,
-      "id": "W2-T01",
+      "id": "W2-T02",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T03": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T03",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T04": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T04",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T05": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T05",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T06": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T06",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T07": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T07",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T10": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T10",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T11": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T11",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T12": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T12",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T13": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T13",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T14": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T14",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T15": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T15",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T16": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T16",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T17": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T17",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T20": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T20",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T21": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T21",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T22": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T22",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T23": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T23",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T24": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T24",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T25": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T25",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T26": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T26",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T27": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T27",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T30": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T30",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T31": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T31",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T32": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T32",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T33": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T33",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T34": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T34",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T35": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T35",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T36": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T36",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T37": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T37",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T40": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T40",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T41": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T41",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T42": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T42",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T43": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T43",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T44": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T44",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T45": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T45",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T46": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T46",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T47": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T47",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T50": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T50",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T51": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T51",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T52": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T52",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T53": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T53",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T54": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T54",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T55": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T55",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T56": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T56",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T60": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T60",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T61": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T61",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T62": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T62",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T63": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T63",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T64": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T64",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T65": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T65",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T66": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T66",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T70": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T70",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T71": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T71",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T72": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T72",
+      "owner": null,
+      "pr": null,
+      "status": "pending"
+    },
+    "W2-T73": {
+      "branch": null,
+      "claimed_at": null,
+      "commit": null,
+      "completed_at": null,
+      "id": "W2-T73",
       "owner": null,
       "pr": null,
       "status": "pending"
@@ -1559,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-24T11:11:50.466468+00:00",
+  "updated_at": "2026-06-24T11:28:59.426579+00:00",
   "version": "0.0.1-foundation"
 }

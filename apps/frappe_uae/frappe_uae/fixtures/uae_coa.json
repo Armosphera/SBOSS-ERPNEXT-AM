@@ -1,0 +1,4313 @@
+{
+ "_meta": {
+  "country": "UAE",
+  "standard": "IFRS",
+  "approx_accounts": 430,
+  "bilingual": [
+   "en",
+   "ar"
+  ]
+ },
+ "accounts": [
+  {
+   "account_number": "1000",
+   "account_name_en": "Assets",
+   "account_name_ar": "الأصول",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": null,
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1100",
+   "account_name_en": "Non-Current Assets",
+   "account_name_ar": "الأصول غير المتداولة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1200",
+   "account_name_en": "Current Assets",
+   "account_name_ar": "الأصول المتداولة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1110",
+   "account_name_en": "Property, Plant and Equipment",
+   "account_name_ar": "الممتلكات والمصانع والمعدات",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1111",
+   "account_name_en": "Land",
+   "account_name_ar": "الأراضي",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1112",
+   "account_name_en": "Buildings",
+   "account_name_ar": "المباني",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1113",
+   "account_name_en": "Accumulated Depreciation - Buildings",
+   "account_name_ar": "مجمع استهلاك المباني",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1114",
+   "account_name_en": "Plant and Machinery",
+   "account_name_ar": "المصانع والآلات",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1115",
+   "account_name_en": "Accumulated Depreciation - Plant and Machinery",
+   "account_name_ar": "مجمع استهلاك المصانع والآلات",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1116",
+   "account_name_en": "Motor Vehicles",
+   "account_name_ar": "المركبات",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1117",
+   "account_name_en": "Accumulated Depreciation - Motor Vehicles",
+   "account_name_ar": "مجمع استهلاك المركبات",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1118",
+   "account_name_en": "Furniture and Fixtures",
+   "account_name_ar": "الأثاث والتركيبات",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1119",
+   "account_name_en": "Accumulated Depreciation - Furniture and Fixtures",
+   "account_name_ar": "مجمع استهلاك الأثاث والتركيبات",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1121",
+   "account_name_en": "Office Equipment",
+   "account_name_ar": "معدات المكاتب",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1122",
+   "account_name_en": "Accumulated Depreciation - Office Equipment",
+   "account_name_ar": "مجمع استهلاك معدات المكاتب",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1123",
+   "account_name_en": "Computer Equipment",
+   "account_name_ar": "معدات الحاسوب",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1124",
+   "account_name_en": "Accumulated Depreciation - Computer Equipment",
+   "account_name_ar": "مجمع استهلاك معدات الحاسوب",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1125",
+   "account_name_en": "Leasehold Improvements",
+   "account_name_ar": "تحسينات على عقار مستأجر",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1126",
+   "account_name_en": "Accumulated Depreciation - Leasehold Improvements",
+   "account_name_ar": "مجمع استهلاك تحسينات العقارات المستأجرة",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1127",
+   "account_name_en": "Capital Work in Progress",
+   "account_name_ar": "أعمال رأسمالية قيد التنفيذ",
+   "root_type": "Asset",
+   "account_type": "Capital Work in Progress",
+   "parent_account_number": "1110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1130",
+   "account_name_en": "Right-of-Use Assets",
+   "account_name_ar": "أصول حق الاستخدام",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1131",
+   "account_name_en": "Right-of-Use - Buildings (IFRS 16)",
+   "account_name_ar": "حق استخدام المباني",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1132",
+   "account_name_en": "Accumulated Depreciation - ROU Buildings",
+   "account_name_ar": "مجمع استهلاك حق استخدام المباني",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1133",
+   "account_name_en": "Right-of-Use - Motor Vehicles (IFRS 16)",
+   "account_name_ar": "حق استخدام المركبات",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1134",
+   "account_name_en": "Accumulated Depreciation - ROU Motor Vehicles",
+   "account_name_ar": "مجمع استهلاك حق استخدام المركبات",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1135",
+   "account_name_en": "Right-of-Use - Office Equipment (IFRS 16)",
+   "account_name_ar": "حق استخدام معدات المكاتب",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1136",
+   "account_name_en": "Accumulated Depreciation - ROU Office Equipment",
+   "account_name_ar": "مجمع استهلاك حق استخدام معدات المكاتب",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1140",
+   "account_name_en": "Investment Property",
+   "account_name_ar": "العقارات الاستثمارية",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1141",
+   "account_name_en": "Investment Property - Land",
+   "account_name_ar": "العقارات الاستثمارية - أراض",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1142",
+   "account_name_en": "Investment Property - Buildings",
+   "account_name_ar": "العقارات الاستثمارية - مبان",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1143",
+   "account_name_en": "Accumulated Depreciation - Investment Property",
+   "account_name_ar": "مجمع استهلاك العقارات الاستثمارية",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1144",
+   "account_name_en": "Fair Value Adjustment - Investment Property",
+   "account_name_ar": "تعديل القيمة العادلة للعقارات الاستثمارية",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1150",
+   "account_name_en": "Intangible Assets",
+   "account_name_ar": "الأصول غير الملموسة",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1151",
+   "account_name_en": "Goodwill",
+   "account_name_ar": "الشهرة",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1152",
+   "account_name_en": "Patents and Trademarks",
+   "account_name_ar": "براءات الاختراع والعلامات التجارية",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1153",
+   "account_name_en": "Accumulated Amortisation - Patents and Trademarks",
+   "account_name_ar": "مجمع إطفاء براءات الاختراع والعلامات",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1154",
+   "account_name_en": "Computer Software",
+   "account_name_ar": "برامج الحاسوب",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1155",
+   "account_name_en": "Accumulated Amortisation - Computer Software",
+   "account_name_ar": "مجمع إطفاء برامج الحاسوب",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1156",
+   "account_name_en": "Licences",
+   "account_name_ar": "التراخيص",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1157",
+   "account_name_en": "Accumulated Amortisation - Licences",
+   "account_name_ar": "مجمع إطفاء التراخيص",
+   "root_type": "Asset",
+   "account_type": "Accumulated Depreciation",
+   "parent_account_number": "1150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1158",
+   "account_name_en": "Development Costs",
+   "account_name_ar": "تكاليف التطوير",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1160",
+   "account_name_en": "Biological Assets",
+   "account_name_ar": "الأصول البيولوجية",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1161",
+   "account_name_en": "Bearer Biological Assets",
+   "account_name_ar": "أصول بيولوجية مثمرة",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1162",
+   "account_name_en": "Consumable Biological Assets",
+   "account_name_ar": "أصول بيولوجية قابلة للاستهلاك",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1163",
+   "account_name_en": "Agricultural Produce on Bearer Plants",
+   "account_name_ar": "منتجات زراعية على نباتات مثمرة",
+   "root_type": "Asset",
+   "account_type": "Stock",
+   "parent_account_number": "1160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1164",
+   "account_name_en": "Livestock",
+   "account_name_ar": "الثروة الحيوانية",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1165",
+   "account_name_en": "Standing Timber",
+   "account_name_ar": "الأخشاب القائمة",
+   "root_type": "Asset",
+   "account_type": "Fixed Asset",
+   "parent_account_number": "1160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1170",
+   "account_name_en": "Long-term Investments",
+   "account_name_ar": "الاستثمارات طويلة الأجل",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1171",
+   "account_name_en": "Investments in Subsidiaries",
+   "account_name_ar": "استثمارات في شركات تابعة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1172",
+   "account_name_en": "Investments in Associates",
+   "account_name_ar": "استثمارات في شركات شقيقة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1173",
+   "account_name_en": "Investments in Joint Ventures",
+   "account_name_ar": "استثمارات في مشاريع مشتركة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1174",
+   "account_name_en": "Equity Instruments at FVOCI (IFRS 9)",
+   "account_name_ar": "أدوات حقوق ملكية بالقيمة العادلة من خلال الدخل الشامل",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1175",
+   "account_name_en": "Debt Instruments at Amortised Cost (IFRS 9)",
+   "account_name_ar": "أدوات دين بالتكلفة المستهلكة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1176",
+   "account_name_en": "Financial Assets at FVTPL (IFRS 9)",
+   "account_name_ar": "أصول مالية بالقيمة العادلة من خلال الربح والخسارة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1177",
+   "account_name_en": "Held-to-Maturity Investments",
+   "account_name_ar": "استثمارات محتفظ بها حتى الاستحقاق",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1178",
+   "account_name_en": "Available-for-Sale Financial Assets",
+   "account_name_ar": "أصول مالية متاحة للبيع",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1179",
+   "account_name_en": "Impairment of Investments (IAS 36)",
+   "account_name_ar": "انخفاض قيمة الاستثمارات",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1180",
+   "account_name_en": "Long-term Receivables",
+   "account_name_ar": "المدينون طويلو الأجل",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1181",
+   "account_name_en": "Loans to Employees (Long-term)",
+   "account_name_ar": "قروض للموظفين - طويلة الأجل",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1182",
+   "account_name_en": "Loans to Related Parties (Long-term)",
+   "account_name_ar": "قروض لأطراف ذات علاقة - طويلة الأجل",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1183",
+   "account_name_en": "Trade Receivables (Long-term)",
+   "account_name_ar": "مدينون تجاريون - طويلو الأجل",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "1180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1184",
+   "account_name_en": "Security Deposits (Long-term)",
+   "account_name_ar": "ودائع ضمان - طويلة الأجل",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1185",
+   "account_name_en": "Impairment of Long-term Receivables",
+   "account_name_ar": "خسائر انخفاض المدينين طويلو الأجل",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1190",
+   "account_name_en": "Deferred Tax Assets (IAS 12)",
+   "account_name_ar": "أصول الضريبة المؤجلة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1191",
+   "account_name_en": "Deferred Tax Asset - Property, Plant and Equipment",
+   "account_name_ar": "أصل الضريبة المؤجلة - الممتلكات والمصانع والمعدات",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1190",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1192",
+   "account_name_en": "Deferred Tax Asset - Provisions",
+   "account_name_ar": "أصل الضريبة المؤجلة - المخصصات",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1190",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1193",
+   "account_name_en": "Deferred Tax Asset - Tax Losses",
+   "account_name_ar": "أصل الضريبة المؤجلة - الخسائر الضريبية",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1190",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1194",
+   "account_name_en": "Prepayments (Non-current)",
+   "account_name_ar": "مصروفات مقدمة - غير متداولة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1195",
+   "account_name_en": "Other Non-current Assets",
+   "account_name_ar": "أصول غير متداولة أخرى",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1196",
+   "account_name_en": "Impairment of PPE (IAS 36)",
+   "account_name_ar": "انخفاض قيمة الممتلكات والمصانع والمعدات",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1197",
+   "account_name_en": "Impairment of Intangibles (IAS 36)",
+   "account_name_ar": "انخفاض قيمة الأصول غير الملموسة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1198",
+   "account_name_en": "Impairment of Investment Property (IAS 36)",
+   "account_name_ar": "انخفاض قيمة العقارات الاستثمارية",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "1199",
+   "account_name_en": "Impairment of Goodwill (IAS 36)",
+   "account_name_ar": "انخفاض قيمة الشهرة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2100",
+   "account_name_en": "Inventory",
+   "account_name_ar": "المخزون",
+   "root_type": "Asset",
+   "account_type": "Stock",
+   "parent_account_number": "1200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2101",
+   "account_name_en": "Raw Materials",
+   "account_name_ar": "المواد الخام",
+   "root_type": "Asset",
+   "account_type": "Stock",
+   "parent_account_number": "2100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2102",
+   "account_name_en": "Work in Progress",
+   "account_name_ar": "إنتاج تحت التشغيل",
+   "root_type": "Asset",
+   "account_type": "Stock",
+   "parent_account_number": "2100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2103",
+   "account_name_en": "Finished Goods",
+   "account_name_ar": "بضاعة جاهزة",
+   "root_type": "Asset",
+   "account_type": "Stock",
+   "parent_account_number": "2100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2104",
+   "account_name_en": "Goods in Transit",
+   "account_name_ar": "بضائع في الطريق",
+   "root_type": "Asset",
+   "account_type": "Stock",
+   "parent_account_number": "2100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2105",
+   "account_name_en": "Packing Materials",
+   "account_name_ar": "مواد التعبئة والتغليف",
+   "root_type": "Asset",
+   "account_type": "Stock",
+   "parent_account_number": "2100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2106",
+   "account_name_en": "Stock Consumables",
+   "account_name_ar": "مواد استهلاكية",
+   "root_type": "Asset",
+   "account_type": "Stock",
+   "parent_account_number": "2100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2107",
+   "account_name_en": "Stock Provision / Obsolete Stock",
+   "account_name_ar": "مخصص بضاعة متقادمة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2108",
+   "account_name_en": "Stock Received But Not Billed",
+   "account_name_ar": "بضاعة مستلمة غير مفوترة",
+   "root_type": "Asset",
+   "account_type": "Stock Received But Not Billed",
+   "parent_account_number": "1200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2109",
+   "account_name_en": "Service Received But Not Billed",
+   "account_name_ar": "خدمات مستلمة غير مفوترة",
+   "root_type": "Asset",
+   "account_type": "Service Received But Not Billed",
+   "parent_account_number": "1200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2200",
+   "account_name_en": "Accounts Receivable",
+   "account_name_ar": "المدينون",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "1200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2201",
+   "account_name_en": "Trade Receivables (Domestic)",
+   "account_name_ar": "مدينون تجاريون - محليون",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "2200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2202",
+   "account_name_en": "Trade Receivables (GCC)",
+   "account_name_ar": "مدينون تجاريون - دول مجلس التعاون",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "2200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2203",
+   "account_name_en": "Trade Receivables (International)",
+   "account_name_ar": "مدينون تجاريون - دولي",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "2200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2204",
+   "account_name_en": "Export Receivables",
+   "account_name_ar": "مدينون التصدير",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "2200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2205",
+   "account_name_en": "Intercompany Receivables",
+   "account_name_ar": "مدينون - شركات المجموعة",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "2200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2206",
+   "account_name_en": "Employee Receivables",
+   "account_name_ar": "مدينون - موظفون",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "2200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2207",
+   "account_name_en": "Related Party Receivables",
+   "account_name_ar": "مدينون - أطراف ذات علاقة",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "2200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2208",
+   "account_name_en": "Allowance for Doubtful Debts",
+   "account_name_ar": "مخصص الديون المشكوك في تحصيلها",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2209",
+   "account_name_en": "Notes Receivable",
+   "account_name_ar": "أوراق قبض",
+   "root_type": "Asset",
+   "account_type": "Receivable",
+   "parent_account_number": "1200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2300",
+   "account_name_en": "VAT Receivable (UAE)",
+   "account_name_ar": "ضريبة القيمة المضافة - مدينة",
+   "root_type": "Asset",
+   "account_type": "Tax",
+   "parent_account_number": "1200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2301",
+   "account_name_en": "Input VAT - Standard Rated 5%",
+   "account_name_ar": "مدخلات ضريبة القيمة المضافة 5٪",
+   "root_type": "Asset",
+   "account_type": "Tax",
+   "parent_account_number": "2300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2302",
+   "account_name_en": "Input VAT - Reverse Charge",
+   "account_name_ar": "مدخلات ضريبة القيمة المضافة - آلية الاحتساب العكسي",
+   "root_type": "Asset",
+   "account_type": "Tax",
+   "parent_account_number": "2300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2303",
+   "account_name_en": "Input VAT - Designated Zones",
+   "account_name_ar": "مدخلات ضريبة القيمة المضافة - المناطق المحددة",
+   "root_type": "Asset",
+   "account_type": "Tax",
+   "parent_account_number": "2300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2304",
+   "account_name_en": "Input VAT - Imports",
+   "account_name_ar": "مدخلات ضريبة القيمة المضافة - واردات",
+   "root_type": "Asset",
+   "account_type": "Tax",
+   "parent_account_number": "2300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2305",
+   "account_name_en": "Input VAT - Expenses",
+   "account_name_ar": "مدخلات ضريبة القيمة المضافة - مصروفات",
+   "root_type": "Asset",
+   "account_type": "Tax",
+   "parent_account_number": "2300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2306",
+   "account_name_en": "Input VAT - Capital Goods",
+   "account_name_ar": "مدخلات ضريبة القيمة المضافة - أصول رأسمالية",
+   "root_type": "Asset",
+   "account_type": "Tax",
+   "parent_account_number": "2300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2307",
+   "account_name_en": "Corporate Tax Advance Payments (UAE 9%)",
+   "account_name_ar": "دفعات مقدمة للضريبة المؤسسية 9٪",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2308",
+   "account_name_en": "Excise Tax Receivable",
+   "account_name_ar": "ضريبة انتقائية - مدينة",
+   "root_type": "Asset",
+   "account_type": "Tax",
+   "parent_account_number": "1200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2400",
+   "account_name_en": "Bank",
+   "account_name_ar": "البنك",
+   "root_type": "Asset",
+   "account_type": "Bank",
+   "parent_account_number": "1200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2401",
+   "account_name_en": "Emirates NBD - AED Operating Account",
+   "account_name_ar": "بنك الإمارات دبي الوطني - حساب تشغيلي درهم",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2402",
+   "account_name_en": "Emirates NBD - USD Operating Account",
+   "account_name_ar": "بنك الإمارات دبي الوطني - حساب تشغيلي دولار",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2403",
+   "account_name_en": "Abu Dhabi Commercial Bank (ADCB) - AED",
+   "account_name_ar": "بنك أبوظبي التجاري - درهم",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2404",
+   "account_name_en": "First Abu Dhabi Bank (FAB) - AED",
+   "account_name_ar": "بنك أبوظبي الأول - درهم",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2405",
+   "account_name_en": "Mashreq Bank - AED",
+   "account_name_ar": "بنك المشرق - درهم",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2406",
+   "account_name_en": "RAKBank - AED",
+   "account_name_ar": "بنك رأس الخيمة - درهم",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2407",
+   "account_name_en": "Dubai Islamic Bank (DIB) - AED",
+   "account_name_ar": "بنك دبي الإسلامي - درهم",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2408",
+   "account_name_en": "Bank Deposits (Short-term)",
+   "account_name_ar": "ودائع بنكية - قصيرة الأجل",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2409",
+   "account_name_en": "Cash Margin / Bank Guarantees",
+   "account_name_ar": "هامش نقدي / ضمانات بنكية",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2500",
+   "account_name_en": "Cash on Hand",
+   "account_name_ar": "النقدية في الصندوق",
+   "root_type": "Asset",
+   "account_type": "Cash",
+   "parent_account_number": "1200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2501",
+   "account_name_en": "Cash - Main Office (AED)",
+   "account_name_ar": "النقدية - المكتب الرئيسي (درهم)",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2502",
+   "account_name_en": "Cash - Petty Cash (AED)",
+   "account_name_ar": "النقدية - المصروفات النثرية (درهم)",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2503",
+   "account_name_en": "Cash - Branch (AED)",
+   "account_name_ar": "النقدية - الفرع (درهم)",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2504",
+   "account_name_en": "Cash in Transit",
+   "account_name_ar": "النقدية في الطريق",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2505",
+   "account_name_en": "Foreign Currency Cash (USD)",
+   "account_name_ar": "نقدية بالعملة الأجنبية (دولار)",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2506",
+   "account_name_en": "Foreign Currency Cash (EUR)",
+   "account_name_ar": "نقدية بالعملة الأجنبية (يورو)",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2507",
+   "account_name_en": "Foreign Currency Cash (GBP)",
+   "account_name_ar": "نقدية بالعملة الأجنبية (جنيه إسترليني)",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2600",
+   "account_name_en": "Prepayments and Other Current Assets",
+   "account_name_ar": "المصروفات المقدمة والأصول المتداولة الأخرى",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "1200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2601",
+   "account_name_en": "Prepaid Rent",
+   "account_name_ar": "إيجار مقدم",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2602",
+   "account_name_en": "Prepaid Insurance",
+   "account_name_ar": "تأمين مقدم",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2603",
+   "account_name_en": "Prepaid Licences and Permits",
+   "account_name_ar": "تراخيص وتصاريح مقدمة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2604",
+   "account_name_en": "Prepaid Salaries",
+   "account_name_ar": "رواتب مقدمة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2605",
+   "account_name_en": "Prepaid Advertising",
+   "account_name_ar": "إعلان مقدم",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2606",
+   "account_name_en": "Prepaid Maintenance",
+   "account_name_ar": "صيانة مقدمة",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2607",
+   "account_name_en": "Advances to Suppliers",
+   "account_name_ar": "دفعات مقدمة للموردين",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2608",
+   "account_name_en": "Advances to Employees",
+   "account_name_ar": "دفعات مقدمة للموظفين",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "2609",
+   "account_name_en": "Refundable Deposits (Short-term)",
+   "account_name_ar": "ودائع مستردة - قصيرة الأجل",
+   "root_type": "Asset",
+   "account_type": "",
+   "parent_account_number": "2600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3000",
+   "account_name_en": "Equity",
+   "account_name_ar": "حقوق الملكية",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": null,
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3100",
+   "account_name_en": "Share Capital",
+   "account_name_ar": "رأس المال",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3101",
+   "account_name_en": "Authorised Share Capital",
+   "account_name_ar": "رأس المال المصرح به",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3102",
+   "account_name_en": "Issued Share Capital",
+   "account_name_ar": "رأس المال المصدر",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3103",
+   "account_name_en": "Treasury Shares (IFRS 9)",
+   "account_name_ar": "أسهم الخزينة",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3200",
+   "account_name_en": "Reserves",
+   "account_name_ar": "الاحتياطيات",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3201",
+   "account_name_en": "Share Premium",
+   "account_name_ar": "علاوة الإصدار",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3202",
+   "account_name_en": "Statutory Reserve",
+   "account_name_ar": "الاحتياطي القانوني",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3203",
+   "account_name_en": "General Reserve",
+   "account_name_ar": "الاحتياطي العام",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3204",
+   "account_name_en": "Revaluation Reserve (IFRS / IAS 16)",
+   "account_name_ar": "احتياطي إعادة التقييم",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3205",
+   "account_name_en": "Fair Value Reserve (IFRS 9)",
+   "account_name_ar": "احتياطي القيمة العادلة",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3206",
+   "account_name_en": "Hedging Reserve (IFRS 9)",
+   "account_name_ar": "احتياطي التحوط",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3207",
+   "account_name_en": "Translation Reserve (IAS 21)",
+   "account_name_ar": "احتياطي تحويل العملات",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3208",
+   "account_name_en": "Dividend Reserve",
+   "account_name_ar": "احتياطي التوزيعات",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3300",
+   "account_name_en": "Retained Earnings",
+   "account_name_ar": "الأرباح المحتجزة",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3301",
+   "account_name_en": "Retained Earnings - Prior Years",
+   "account_name_ar": "أرباح محتجزة - سنوات سابقة",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3302",
+   "account_name_en": "Current Year Earnings",
+   "account_name_ar": "أرباح السنة الحالية",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3303",
+   "account_name_en": "Dividends Declared (Interim)",
+   "account_name_ar": "توزيعات معلنة - مرحلية",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3400",
+   "account_name_en": "Other Equity Components",
+   "account_name_ar": "مكونات حقوق ملكية أخرى",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3401",
+   "account_name_en": "Share-Based Payment Reserve (IFRS 2)",
+   "account_name_ar": "احتياطي الدفع على أساس الأسهم",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3402",
+   "account_name_en": "OCI - Remeasurement of DBO (IAS 19)",
+   "account_name_ar": "الدخل الشامل الآخر - إعادة قياس التزامات المنافع",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3403",
+   "account_name_en": "OCI - Revaluation Surplus (IAS 16)",
+   "account_name_ar": "الدخل الشامل الآخر - فائض إعادة التقييم",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3404",
+   "account_name_en": "Non-controlling Interests (IFRS 10)",
+   "account_name_ar": "حصص غير مسيطرة",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3405",
+   "account_name_en": "Capital Redemption Reserve",
+   "account_name_ar": "احتياطي استرداد رأس المال",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3406",
+   "account_name_en": "Merger Reserve",
+   "account_name_ar": "احتياطي الاندماج",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "3407",
+   "account_name_en": "ESIC Reserve (Employee Share Incentive)",
+   "account_name_ar": "احتياطي حوافز الموظفين",
+   "root_type": "Equity",
+   "account_type": "Equity",
+   "parent_account_number": "3400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4000",
+   "account_name_en": "Liabilities",
+   "account_name_ar": "الالتزامات",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": null,
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4100",
+   "account_name_en": "Non-Current Liabilities",
+   "account_name_ar": "الالتزامات غير المتداولة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4200",
+   "account_name_en": "Current Liabilities",
+   "account_name_ar": "الالتزامات المتداولة",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "4000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4110",
+   "account_name_en": "Long-term Borrowings",
+   "account_name_ar": "القروض طويلة الأجل",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4111",
+   "account_name_en": "Bank Loan - Emirates NBD (Long-term)",
+   "account_name_ar": "قرض بنكي - بنك الإمارات دبي الوطني",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4112",
+   "account_name_en": "Bank Loan - ADCB (Long-term)",
+   "account_name_ar": "قرض بنكي - بنك أبوظبي التجاري",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4113",
+   "account_name_en": "Bank Loan - FAB (Long-term)",
+   "account_name_ar": "قرض بنكي - بنك أبوظبي الأول",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4114",
+   "account_name_en": "Bank Loan - Mashreq (Long-term)",
+   "account_name_ar": "قرض بنكي - بنك المشرق",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4115",
+   "account_name_en": "Sukuk (Islamic Bond) - Long-term",
+   "account_name_ar": "صكوك - طويلة الأجل",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4116",
+   "account_name_en": "Mortgage Loan (Long-term)",
+   "account_name_ar": "قرض رهن عقاري - طويل الأجل",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4117",
+   "account_name_en": "Subordinated Loan",
+   "account_name_ar": "قرض ثانوي",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4118",
+   "account_name_en": "Related Party Loan (Long-term)",
+   "account_name_ar": "قرض طرف ذي علاقة - طويل الأجل",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4119",
+   "account_name_en": "Unamortised Loan Processing Fees",
+   "account_name_ar": "رسوم معالجة القرض غير المستهلكة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4120",
+   "account_name_en": "Lease Liabilities (IFRS 16)",
+   "account_name_ar": "التزامات الإيجار",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4121",
+   "account_name_en": "Lease Liability - Buildings (Non-current)",
+   "account_name_ar": "التزام إيجار - مبان (غير متداول)",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4122",
+   "account_name_en": "Lease Liability - Motor Vehicles (Non-current)",
+   "account_name_ar": "التزام إيجار - مركبات (غير متداول)",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4123",
+   "account_name_en": "Lease Liability - Office Equipment (Non-current)",
+   "account_name_ar": "التزام إيجار - معدات مكاتب (غير متداول)",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4130",
+   "account_name_en": "Long-term Payables",
+   "account_name_ar": "دائنون طويلو الأجل",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4131",
+   "account_name_en": "Trade Payables (Long-term)",
+   "account_name_ar": "دائنون تجاريون - طويلو الأجل",
+   "root_type": "Liability",
+   "account_type": "Payable",
+   "parent_account_number": "4130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4132",
+   "account_name_en": "Security Deposits Received (Long-term)",
+   "account_name_ar": "ودائع ضمان مستلمة - طويلة الأجل",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4140",
+   "account_name_en": "Provisions (IAS 37)",
+   "account_name_ar": "المخصصات",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4141",
+   "account_name_en": "Provision for End-of-Service Benefits (EOSB)",
+   "account_name_ar": "مخصص نهاية الخدمة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4142",
+   "account_name_en": "Provision for Annual Leave",
+   "account_name_ar": "مخصص الإجازة السنوية",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4143",
+   "account_name_en": "Provision for Bonus",
+   "account_name_ar": "مخصص المكافآت",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4144",
+   "account_name_en": "Provision for Warranty Claims (IAS 37)",
+   "account_name_ar": "مخصص مطالبات الضمان",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4145",
+   "account_name_en": "Provision for Legal Claims (IAS 37)",
+   "account_name_ar": "مخصص المطالبات القانونية",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4146",
+   "account_name_en": "Provision for Decommissioning (IAS 37)",
+   "account_name_ar": "مخصص تفكيك الأصول",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4147",
+   "account_name_en": "Provision for Onerous Contracts (IAS 37)",
+   "account_name_ar": "مخصص العقود المثقلة بالالتزامات",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4148",
+   "account_name_en": "Provision for Restructuring (IAS 37)",
+   "account_name_ar": "مخصص إعادة الهيكلة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4149",
+   "account_name_en": "Provision for Gratuity (Unfunded)",
+   "account_name_ar": "مخصص مكافأة نهاية الخدمة (غير ممول)",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4150",
+   "account_name_en": "Deferred Tax Liabilities (IAS 12)",
+   "account_name_ar": "التزامات الضريبة المؤجلة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4151",
+   "account_name_en": "Deferred Tax Liability - PPE",
+   "account_name_ar": "التزام الضريبة المؤجلة - الممتلكات والمصانع والمعدات",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4152",
+   "account_name_en": "Deferred Tax Liability - Investment Property",
+   "account_name_ar": "التزام الضريبة المؤجلة - العقارات الاستثمارية",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4153",
+   "account_name_en": "Government Grants (Deferred, IAS 20)",
+   "account_name_ar": "منح حكومية مؤجلة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4154",
+   "account_name_en": "Contract Liabilities (Non-current, IFRS 15)",
+   "account_name_ar": "التزامات عقدية - غير متداولة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "4155",
+   "account_name_en": "Other Non-current Liabilities",
+   "account_name_ar": "التزامات غير متداولة أخرى",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5100",
+   "account_name_en": "Short-term Borrowings",
+   "account_name_ar": "القروض قصيرة الأجل",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5101",
+   "account_name_en": "Bank Overdraft",
+   "account_name_ar": "السحب على المكشوف",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5102",
+   "account_name_en": "Short-term Bank Loan - Emirates NBD",
+   "account_name_ar": "قرض بنكي قصير الأجل - بنك الإمارات دبي الوطني",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5103",
+   "account_name_en": "Short-term Bank Loan - FAB",
+   "account_name_ar": "قرض بنكي قصير الأجل - بنك أبوظبي الأول",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5104",
+   "account_name_en": "Current Portion of Long-term Debt",
+   "account_name_ar": "الجزء المتداول من قروض طويلة الأجل",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5105",
+   "account_name_en": "Credit Card Payable",
+   "account_name_ar": "بطاقة ائتمان - مستحقات",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5106",
+   "account_name_en": "Dividends Payable",
+   "account_name_ar": "توزيعات مستحقة الدفع",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5107",
+   "account_name_en": "Short-term Notes Payable",
+   "account_name_ar": "أوراق دفع قصيرة الأجل",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5200",
+   "account_name_en": "Lease Liabilities - Current Portion (IFRS 16)",
+   "account_name_ar": "التزامات الإيجار - الجزء المتداول",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5201",
+   "account_name_en": "Lease Liability - Buildings (Current)",
+   "account_name_ar": "التزام إيجار - مبان (متداول)",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5202",
+   "account_name_en": "Lease Liability - Motor Vehicles (Current)",
+   "account_name_ar": "التزام إيجار - مركبات (متداول)",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5203",
+   "account_name_en": "Lease Liability - Office Equipment (Current)",
+   "account_name_ar": "التزام إيجار - معدات مكاتب (متداول)",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5300",
+   "account_name_en": "Accounts Payable",
+   "account_name_ar": "الدائنون",
+   "root_type": "Liability",
+   "account_type": "Payable",
+   "parent_account_number": "4200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5301",
+   "account_name_en": "Trade Payables (Domestic)",
+   "account_name_ar": "دائنون تجاريون - محليون",
+   "root_type": "Liability",
+   "account_type": "Payable",
+   "parent_account_number": "5300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5302",
+   "account_name_en": "Trade Payables (GCC)",
+   "account_name_ar": "دائنون تجاريون - دول مجلس التعاون",
+   "root_type": "Liability",
+   "account_type": "Payable",
+   "parent_account_number": "5300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5303",
+   "account_name_en": "Trade Payables (International)",
+   "account_name_ar": "دائنون تجاريون - دولي",
+   "root_type": "Liability",
+   "account_type": "Payable",
+   "parent_account_number": "5300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5304",
+   "account_name_en": "Import Payables",
+   "account_name_ar": "دائنون الواردات",
+   "root_type": "Liability",
+   "account_type": "Payable",
+   "parent_account_number": "5300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5305",
+   "account_name_en": "Intercompany Payables",
+   "account_name_ar": "دائنون - شركات المجموعة",
+   "root_type": "Liability",
+   "account_type": "Payable",
+   "parent_account_number": "5300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5306",
+   "account_name_en": "Related Party Payables",
+   "account_name_ar": "دائنون - أطراف ذات علاقة",
+   "root_type": "Liability",
+   "account_type": "Payable",
+   "parent_account_number": "5300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5307",
+   "account_name_en": "Employee Payables",
+   "account_name_ar": "مستحقات الموظفين",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5308",
+   "account_name_en": "Accrued Expenses",
+   "account_name_ar": "مصروفات مستحقة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5309",
+   "account_name_en": "Notes Payable",
+   "account_name_ar": "أوراق دفع",
+   "root_type": "Liability",
+   "account_type": "Payable",
+   "parent_account_number": "4200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5400",
+   "account_name_en": "VAT Payable (UAE 5%)",
+   "account_name_ar": "ضريبة القيمة المضافة - دائنة",
+   "root_type": "Liability",
+   "account_type": "Tax",
+   "parent_account_number": "4200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5401",
+   "account_name_en": "Output VAT - Standard Rated 5%",
+   "account_name_ar": "مخرجات ضريبة القيمة المضافة 5٪",
+   "root_type": "Liability",
+   "account_type": "Tax",
+   "parent_account_number": "5400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5402",
+   "account_name_en": "Output VAT - Reverse Charge",
+   "account_name_ar": "مخرجات ضريبة القيمة المضافة - آلية الاحتساب العكسي",
+   "root_type": "Liability",
+   "account_type": "Tax",
+   "parent_account_number": "5400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5403",
+   "account_name_en": "Output VAT - Designated Zones",
+   "account_name_ar": "مخرجات ضريبة القيمة المضافة - المناطق المحددة",
+   "root_type": "Liability",
+   "account_type": "Tax",
+   "parent_account_number": "5400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5404",
+   "account_name_en": "Output VAT - Exports",
+   "account_name_ar": "مخرجات ضريبة القيمة المضافة - صادرات",
+   "root_type": "Liability",
+   "account_type": "Tax",
+   "parent_account_number": "5400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5405",
+   "account_name_en": "Output VAT - Imported Services",
+   "account_name_ar": "مخرجات ضريبة القيمة المضافة - خدمات مستوردة",
+   "root_type": "Liability",
+   "account_type": "Tax",
+   "parent_account_number": "5400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5406",
+   "account_name_en": "Corporate Tax Payable (UAE 9%)",
+   "account_name_ar": "الضريبة المؤسسية المستحقة 9٪",
+   "root_type": "Liability",
+   "account_type": "Tax",
+   "parent_account_number": "4200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5407",
+   "account_name_en": "Excise Tax Payable",
+   "account_name_ar": "الضريبة الانتقائية المستحقة",
+   "root_type": "Liability",
+   "account_type": "Tax",
+   "parent_account_number": "4200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5408",
+   "account_name_en": "Withholding Tax Payable",
+   "account_name_ar": "ضريبة مستقطعة مستحقة",
+   "root_type": "Liability",
+   "account_type": "Tax",
+   "parent_account_number": "4200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5500",
+   "account_name_en": "Contract Liabilities (Current, IFRS 15)",
+   "account_name_ar": "التزامات العقد - متداولة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5501",
+   "account_name_en": "Customer Advances - Trade",
+   "account_name_ar": "دفعات مقدمة من العملاء - تجارية",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "5500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5502",
+   "account_name_en": "Deferred Revenue - Services",
+   "account_name_ar": "إيرادات مؤجلة - خدمات",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "5500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5503",
+   "account_name_en": "Deferred Revenue - Goods",
+   "account_name_ar": "إيرادات مؤجلة - بضائع",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "5500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5504",
+   "account_name_en": "Unearned Revenue",
+   "account_name_ar": "إيرادات غير مكتسبة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "5500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5600",
+   "account_name_en": "Other Current Liabilities",
+   "account_name_ar": "التزامات متداولة أخرى",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "4200",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5601",
+   "account_name_en": "Wages Payable (EOSB Accrual)",
+   "account_name_ar": "أجور مستحقة",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5602",
+   "account_name_en": "Gratuity Payable (Current)",
+   "account_name_ar": "مكافأة نهاية الخدمة المستحقة",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5603",
+   "account_name_en": "Insurance Payable",
+   "account_name_ar": "تأمين مستحق",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5604",
+   "account_name_en": "Refundable Deposits (Current)",
+   "account_name_ar": "ودائع مستردة - متداولة",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5605",
+   "account_name_en": "Statutory Dues Payable",
+   "account_name_ar": "رسوم قانونية مستحقة",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "5606",
+   "account_name_en": "Provision for Income Tax",
+   "account_name_ar": "مخصص ضريبة الدخل",
+   "root_type": "Liability",
+   "account_type": "Current Liability",
+   "parent_account_number": "5600",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6000",
+   "account_name_en": "Income",
+   "account_name_ar": "الإيرادات",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": null,
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6100",
+   "account_name_en": "Revenue from Operations",
+   "account_name_ar": "إيرادات التشغيل",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6110",
+   "account_name_en": "Sales (Goods - UAE)",
+   "account_name_ar": "مبيعات (بضائع - الإمارات)",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6111",
+   "account_name_en": "Sales - Domestic (Standard Rated 5%)",
+   "account_name_ar": "مبيعات محلية (خاضعة للنظام 5٪)",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6112",
+   "account_name_en": "Sales - Domestic (Zero Rated)",
+   "account_name_ar": "مبيعات محلية (معفاة بصفر)",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6113",
+   "account_name_en": "Sales - Domestic (Exempt)",
+   "account_name_ar": "مبيعات محلية (معفاة)",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6114",
+   "account_name_en": "Sales - Designated Zones (5%)",
+   "account_name_ar": "مبيعات - المناطق المحددة (5٪)",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6115",
+   "account_name_en": "Sales - Exports (Zero Rated)",
+   "account_name_ar": "مبيعات تصدير (معفاة بصفر)",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6116",
+   "account_name_en": "Sales - GCC (Reverse Charge)",
+   "account_name_ar": "مبيعات - مجلس التعاون (آلية عكسية)",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6117",
+   "account_name_en": "Sales - Intercompany",
+   "account_name_ar": "مبيعات - شركات المجموعة",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6118",
+   "account_name_en": "Sales Returns and Allowances",
+   "account_name_ar": "مردودات ومسموحات المبيعات",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6119",
+   "account_name_en": "Sales Discounts",
+   "account_name_ar": "خصومات المبيعات",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6120",
+   "account_name_en": "Service Revenue (UAE)",
+   "account_name_ar": "إيرادات الخدمات (الإمارات)",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6121",
+   "account_name_en": "Consulting Revenue",
+   "account_name_ar": "إيرادات الاستشارات",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6122",
+   "account_name_en": "Maintenance Revenue",
+   "account_name_ar": "إيرادات الصيانة",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6123",
+   "account_name_en": "Installation Revenue",
+   "account_name_ar": "إيرادات التركيب",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6124",
+   "account_name_en": "Training Revenue",
+   "account_name_ar": "إيرادات التدريب",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6125",
+   "account_name_en": "Management Fee Income",
+   "account_name_ar": "إيرادات رسوم الإدارة",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6126",
+   "account_name_en": "Technical Service Revenue",
+   "account_name_ar": "إيرادات الخدمات الفنية",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6127",
+   "account_name_en": "Marketing Revenue",
+   "account_name_ar": "إيرادات التسويق",
+   "root_type": "Income",
+   "account_type": "Income Account",
+   "parent_account_number": "6120",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6130",
+   "account_name_en": "Other Operating Income",
+   "account_name_ar": "إيرادات تشغيلية أخرى",
+   "root_type": "Income",
+   "account_type": "Indirect Income",
+   "parent_account_number": "6100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6131",
+   "account_name_en": "Commission Income",
+   "account_name_ar": "إيرادات العمولات",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6132",
+   "account_name_en": "Royalty Income",
+   "account_name_ar": "إيرادات الإتاوات",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6133",
+   "account_name_en": "Rent Income (Operating)",
+   "account_name_ar": "إيرادات الإيجار (تشغيلي)",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6134",
+   "account_name_en": "Scrap Sales",
+   "account_name_ar": "مبيعات الخردة",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6135",
+   "account_name_en": "Insurance Recoveries",
+   "account_name_ar": "استردادات التأمين",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6200",
+   "account_name_en": "Finance Income",
+   "account_name_ar": "الإيرادات المالية",
+   "root_type": "Income",
+   "account_type": "Indirect Income",
+   "parent_account_number": "6000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6201",
+   "account_name_en": "Interest Income on Bank Deposits",
+   "account_name_ar": "فوائد ودائع بنكية",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6202",
+   "account_name_en": "Interest Income on Trade Receivables",
+   "account_name_ar": "فوائد المدينين التجاريين",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6203",
+   "account_name_en": "Interest Income on Loans to Subsidiaries",
+   "account_name_ar": "فوائد قروض للشركات التابعة",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6204",
+   "account_name_en": "Dividend Income",
+   "account_name_ar": "إيرادات التوزيعات",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6205",
+   "account_name_en": "Gain on Disposal of Investments",
+   "account_name_ar": "أرباح بيع الاستثمارات",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6206",
+   "account_name_en": "Fair Value Gain on Financial Instruments (IFRS 9)",
+   "account_name_ar": "أرباح القيمة العادلة للأدوات المالية",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6207",
+   "account_name_en": "Foreign Exchange Gain",
+   "account_name_ar": "أرباح فروقات العملة",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6208",
+   "account_name_en": "Gain on Disposal of Property, Plant and Equipment",
+   "account_name_ar": "أرباح بيع الممتلكات والمصانع والمعدات",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6300",
+   "account_name_en": "Other Non-operating Income",
+   "account_name_ar": "إيرادات غير تشغيلية أخرى",
+   "root_type": "Income",
+   "account_type": "Indirect Income",
+   "parent_account_number": "6000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6301",
+   "account_name_en": "Government Grants Income (IAS 20)",
+   "account_name_ar": "إيرادات المنح الحكومية",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6302",
+   "account_name_en": "Sponsorship Income",
+   "account_name_ar": "إيرادات الرعاية",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6303",
+   "account_name_en": "Bad Debts Recovered",
+   "account_name_ar": "مستردات ديون معدومة",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "6304",
+   "account_name_en": "Miscellaneous Income",
+   "account_name_ar": "إيرادات متنوعة",
+   "root_type": "Income",
+   "account_type": "",
+   "parent_account_number": "6300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7000",
+   "account_name_en": "Expenses",
+   "account_name_ar": "المصروفات",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": null,
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7100",
+   "account_name_en": "Operating Expenses",
+   "account_name_ar": "مصروفات التشغيل",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7110",
+   "account_name_en": "Employee Costs (UAE)",
+   "account_name_ar": "تكاليف الموظفين (الإمارات)",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7111",
+   "account_name_en": "Salaries and Wages",
+   "account_name_ar": "رواتب وأجور",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7112",
+   "account_name_en": "Basic Salary",
+   "account_name_ar": "الراتب الأساسي",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7113",
+   "account_name_en": "Housing Allowance",
+   "account_name_ar": "بدل السكن",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7114",
+   "account_name_en": "Transport Allowance",
+   "account_name_ar": "بدل المواصلات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7115",
+   "account_name_en": "Other Allowances",
+   "account_name_ar": "بدلات أخرى",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7116",
+   "account_name_en": "Overtime Pay",
+   "account_name_ar": "أجور العمل الإضافي",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7117",
+   "account_name_en": "Air Ticket Entitlement (Annual Leave)",
+   "account_name_ar": "تذاكر السفر السنوية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7118",
+   "account_name_en": "End-of-Service Benefits (EOSB) Expense - UAE",
+   "account_name_ar": "مصروف نهاية الخدمة - الإمارات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7119",
+   "account_name_en": "Gratuity Expense (IAS 19)",
+   "account_name_ar": "مصروف مكافأة نهاية الخدمة",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7120",
+   "account_name_en": "Staff Bonus and Incentives",
+   "account_name_ar": "مكافآت وحوافز الموظفين",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7121",
+   "account_name_en": "Staff Training and Development",
+   "account_name_ar": "تدريب وتطوير الموظفين",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7122",
+   "account_name_en": "Staff Recruitment Costs",
+   "account_name_ar": "تكاليف توظيف الموظفين",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7123",
+   "account_name_en": "Staff Uniforms and PPE",
+   "account_name_ar": "أزياء الموظفين ومعدات الحماية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7124",
+   "account_name_en": "Work Permits and Residency Visas (UAE)",
+   "account_name_ar": "تصاريح العمل وتأشيرات الإقامة",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7125",
+   "account_name_en": "Medical Insurance - Employees (UAE)",
+   "account_name_ar": "التأمين الصحي - الموظفين",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7126",
+   "account_name_en": "Employee Benefits - Other",
+   "account_name_ar": "منافع الموظفين - أخرى",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7110",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7130",
+   "account_name_en": "Rent and Utilities",
+   "account_name_ar": "الإيجار والمرافق",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7131",
+   "account_name_en": "Office Rent",
+   "account_name_ar": "إيجار المكتب",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7132",
+   "account_name_en": "Warehouse Rent",
+   "account_name_ar": "إيجار المستودع",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7133",
+   "account_name_en": "Equipment Rental",
+   "account_name_ar": "تأجير المعدات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7134",
+   "account_name_en": "Utilities - Electricity and Water (DEWA/FEWA)",
+   "account_name_ar": "كهرباء ومياه",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7135",
+   "account_name_en": "Utilities - Gas",
+   "account_name_ar": "غاز",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7136",
+   "account_name_en": "Telecommunications",
+   "account_name_ar": "اتصالات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7137",
+   "account_name_en": "Internet and IT Services",
+   "account_name_ar": "إنترنت وخدمات تكنولوجيا المعلومات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7138",
+   "account_name_en": "Cooling / District Cooling (Emicool, etc.)",
+   "account_name_ar": "تبريد مركزي",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7130",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7140",
+   "account_name_en": "Travel and Entertainment",
+   "account_name_ar": "السفر والترفيه",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7141",
+   "account_name_en": "Air Travel",
+   "account_name_ar": "سفر جوي",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7142",
+   "account_name_en": "Hotel Accommodation",
+   "account_name_ar": "إقامة فندقية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7143",
+   "account_name_en": "Local Conveyance",
+   "account_name_ar": "مواصلات محلية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7144",
+   "account_name_en": "Business Meals and Entertainment",
+   "account_name_ar": "وجبات عمل وترفيه",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7145",
+   "account_name_en": "Visa and Travel Insurance",
+   "account_name_ar": "تأشيرات وتأمين سفر",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7146",
+   "account_name_en": "Conference and Trade Show Fees",
+   "account_name_ar": "رسوم المؤتمرات والمعارض",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7140",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7150",
+   "account_name_en": "Administrative and Office Expenses",
+   "account_name_ar": "مصروفات إدارية ومكتبية",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7151",
+   "account_name_en": "Office Stationery and Supplies",
+   "account_name_ar": "قرطاسية ولوازم مكتبية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7152",
+   "account_name_en": "Printing and Photocopying",
+   "account_name_ar": "طباعة وتصوير",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7153",
+   "account_name_en": "Postage and Courier",
+   "account_name_ar": "بريد وشحن",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7154",
+   "account_name_en": "Bank Charges",
+   "account_name_ar": "رسوم بنكية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7155",
+   "account_name_en": "Loan Processing Fees",
+   "account_name_ar": "رسوم معالجة القروض",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7156",
+   "account_name_en": "Credit Card Merchant Fees",
+   "account_name_ar": "رسوم تجار بطاقات الائتمان",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7157",
+   "account_name_en": "Office Cleaning and Maintenance",
+   "account_name_ar": "تنظيف وصيانة المكتب",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7158",
+   "account_name_en": "Pest Control and Security Services",
+   "account_name_ar": "مكافحة حشرات وخدمات أمنية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7159",
+   "account_name_en": "Subscriptions and Memberships",
+   "account_name_ar": "اشتراكات وعضويات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7150",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7160",
+   "account_name_en": "Repairs and Maintenance",
+   "account_name_ar": "الإصلاحات والصيانة",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7161",
+   "account_name_en": "Building Repairs and Maintenance",
+   "account_name_ar": "إصلاح وصيانة المباني",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7162",
+   "account_name_en": "Equipment Repairs and Maintenance",
+   "account_name_ar": "إصلاح وصيانة المعدات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7163",
+   "account_name_en": "Computer Hardware Maintenance",
+   "account_name_ar": "صيانة أجهزة الحاسوب",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7164",
+   "account_name_en": "Software Maintenance and Licences",
+   "account_name_ar": "صيانة وتراخيص البرمجيات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7165",
+   "account_name_en": "Vehicle Repairs and Maintenance",
+   "account_name_ar": "إصلاح وصيانة المركبات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7160",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7170",
+   "account_name_en": "Depreciation and Amortisation",
+   "account_name_ar": "الاستهلاك والإطفاء",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7171",
+   "account_name_en": "Depreciation - Buildings",
+   "account_name_ar": "استهلاك المباني",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7172",
+   "account_name_en": "Depreciation - Plant and Machinery",
+   "account_name_ar": "استهلاك المصانع والآلات",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7173",
+   "account_name_en": "Depreciation - Motor Vehicles",
+   "account_name_ar": "استهلاك المركبات",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7174",
+   "account_name_en": "Depreciation - Furniture and Fixtures",
+   "account_name_ar": "استهلاك الأثاث والتركيبات",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7175",
+   "account_name_en": "Depreciation - Office Equipment",
+   "account_name_ar": "استهلاك معدات المكاتب",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7176",
+   "account_name_en": "Depreciation - Computer Equipment",
+   "account_name_ar": "استهلاك معدات الحاسوب",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7177",
+   "account_name_en": "Depreciation - Right-of-Use Assets (IFRS 16)",
+   "account_name_ar": "استهلاك أصول حق الاستخدام",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7178",
+   "account_name_en": "Depreciation - Investment Property (IAS 40)",
+   "account_name_ar": "استهلاك العقارات الاستثمارية",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7179",
+   "account_name_en": "Amortisation - Intangible Assets",
+   "account_name_ar": "إطفاء الأصول غير الملموسة",
+   "root_type": "Expense",
+   "account_type": "Depreciation",
+   "parent_account_number": "7170",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7180",
+   "account_name_en": "Impairment Loss (IAS 36)",
+   "account_name_ar": "خسارة الانخفاض في القيمة",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7181",
+   "account_name_en": "Impairment - Property, Plant and Equipment",
+   "account_name_ar": "انخفاض قيمة الممتلكات والمصانع والمعدات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7182",
+   "account_name_en": "Impairment - Intangible Assets",
+   "account_name_ar": "انخفاض قيمة الأصول غير الملموسة",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7183",
+   "account_name_en": "Impairment - Goodwill",
+   "account_name_ar": "انخفاض قيمة الشهرة",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7184",
+   "account_name_en": "Impairment - Trade Receivables (ECL, IFRS 9)",
+   "account_name_ar": "خسائر الائتمان المتوقعة للمدينين",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7185",
+   "account_name_en": "Impairment - Inventory (IAS 2)",
+   "account_name_ar": "انخفاض قيمة المخزون",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7186",
+   "account_name_en": "Impairment - Investment Property",
+   "account_name_ar": "انخفاض قيمة العقارات الاستثمارية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7187",
+   "account_name_en": "Impairment - Investment in Subsidiaries",
+   "account_name_ar": "انخفاض قيمة استثمارات الشركات التابعة",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7188",
+   "account_name_en": "Reversal of Impairment Loss",
+   "account_name_ar": "عكس خسارة الانخفاض في القيمة",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7180",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7190",
+   "account_name_en": "Selling and Marketing Expenses",
+   "account_name_ar": "مصروفات البيع والتسويق",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7100",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7191",
+   "account_name_en": "Advertising and Promotion",
+   "account_name_ar": "إعلان وترويج",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7190",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7192",
+   "account_name_en": "Digital Marketing",
+   "account_name_ar": "تسويق رقمي",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7190",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7193",
+   "account_name_en": "Sales Commission",
+   "account_name_ar": "عمولات المبيعات",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7190",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7194",
+   "account_name_en": "Exhibition and Trade Fair Costs",
+   "account_name_ar": "معارض ومعارض تجارية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7190",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7195",
+   "account_name_en": "Free Samples and Gifts",
+   "account_name_ar": "عينات وهدايا مجانية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7190",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7196",
+   "account_name_en": "Sponsorship Costs",
+   "account_name_ar": "تكاليف الرعاية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7190",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7200",
+   "account_name_en": "Professional and Legal Fees",
+   "account_name_ar": "أتعاب مهنية وقانونية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7201",
+   "account_name_en": "Audit Fees",
+   "account_name_ar": "أتعاب التدقيق",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7202",
+   "account_name_en": "Legal Fees",
+   "account_name_ar": "أتعاب قانونية",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7203",
+   "account_name_en": "Tax Consultancy Fees",
+   "account_name_ar": "أتعاب استشارات ضريبية",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7204",
+   "account_name_en": "Accounting and Bookkeeping Fees",
+   "account_name_ar": "أتعاب محاسبية",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7205",
+   "account_name_en": "VAT Filing Fees",
+   "account_name_ar": "رسوم تقديم إقرارات ضريبة القيمة المضافة",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7206",
+   "account_name_en": "Corporate Tax Filing Fees (UAE 9%)",
+   "account_name_ar": "رسوم تقديم الإقرار الضريبي المؤسسي 9٪",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7207",
+   "account_name_en": "PRO Services and Government Relations (UAE)",
+   "account_name_ar": "خدمات العلاقات الحكومية",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7208",
+   "account_name_en": "Translation and Attestation Fees",
+   "account_name_ar": "ترجمة وتصديق",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7300",
+   "account_name_en": "Insurance Expenses",
+   "account_name_ar": "مصروفات التأمين",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7301",
+   "account_name_en": "General Insurance",
+   "account_name_ar": "تأمين عام",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7302",
+   "account_name_en": "Vehicle Insurance",
+   "account_name_ar": "تأمين المركبات",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7303",
+   "account_name_en": "Property Insurance",
+   "account_name_ar": "تأمين الممتلكات",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7304",
+   "account_name_en": "Professional Indemnity Insurance",
+   "account_name_ar": "تأمين المسؤولية المهنية",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7305",
+   "account_name_en": "Workmen's Compensation Insurance",
+   "account_name_ar": "تأمين تعويضات العمال",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7400",
+   "account_name_en": "Finance Costs",
+   "account_name_ar": "التكاليف المالية",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7401",
+   "account_name_en": "Interest Expense on Bank Loans",
+   "account_name_ar": "فوائد القروض البنكية",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7402",
+   "account_name_en": "Interest Expense on Lease Liabilities (IFRS 16)",
+   "account_name_ar": "فوائد التزامات الإيجار",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7403",
+   "account_name_en": "Interest Expense on Sukuk",
+   "account_name_ar": "فوائد الصكوك",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7404",
+   "account_name_en": "Finance Charges on Hire Purchase",
+   "account_name_ar": "تكاليف تمويل الشراء بالتقسيط",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7405",
+   "account_name_en": "Loss on Disposal of Investments",
+   "account_name_ar": "خسائر بيع الاستثمارات",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7406",
+   "account_name_en": "Fair Value Loss on Financial Instruments (IFRS 9)",
+   "account_name_ar": "خسائر القيمة العادلة للأدوات المالية",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7407",
+   "account_name_en": "Foreign Exchange Loss",
+   "account_name_ar": "خسائر فروقات العملة",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7408",
+   "account_name_en": "Loss on Disposal of Property, Plant and Equipment",
+   "account_name_ar": "خسائر بيع الممتلكات والمصانع والمعدات",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7500",
+   "account_name_en": "Other Operating Expenses",
+   "account_name_ar": "مصروفات تشغيلية أخرى",
+   "root_type": "Expense",
+   "account_type": "Indirect Expense",
+   "parent_account_number": "7000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7501",
+   "account_name_en": "Donations and CSR",
+   "account_name_ar": "تبرعات ومسؤولية اجتماعية",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7502",
+   "account_name_en": "Penalties and Fines",
+   "account_name_ar": "غرامات وعقوبات",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7503",
+   "account_name_en": "Entertainment Tax (5%)",
+   "account_name_ar": "ضريبة الترفيه",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7504",
+   "account_name_en": "Bad Debts Written Off",
+   "account_name_ar": "ديون معدومة مشطوبة",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7505",
+   "account_name_en": "Inventory Write-off (IAS 2)",
+   "account_name_ar": "شطب المخزون",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "7506",
+   "account_name_en": "Loss on Inventory (NRV Adjustment, IAS 2)",
+   "account_name_ar": "خسائر المخزون - تعديل القيمة الصافية القابلة للتحقق",
+   "root_type": "Expense",
+   "account_type": "",
+   "parent_account_number": "7500",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8000",
+   "account_name_en": "Off-Balance Sheet / Memorandum",
+   "account_name_ar": "حسابات خارج الميزانية / حسابات مذكرة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": null,
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8100",
+   "account_name_en": "Contingent Assets (IAS 37)",
+   "account_name_ar": "أصول محتملة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8101",
+   "account_name_en": "Possible Claims - Pending Lawsuits",
+   "account_name_ar": "مطالبات محتملة - دعاوى قضائية",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8102",
+   "account_name_en": "Tax Disputes - Under Appeal",
+   "account_name_ar": "نزاعات ضريبية - قيد الاستئناف",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8103",
+   "account_name_en": "Insurance Claims Pending",
+   "account_name_ar": "مطالبات تأمين قيد المعالجة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8200",
+   "account_name_en": "Contingent Liabilities (IAS 37)",
+   "account_name_ar": "التزامات محتملة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8201",
+   "account_name_en": "Bank Guarantees Issued",
+   "account_name_ar": "ضمانات بنكية صادرة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8202",
+   "account_name_en": "Letters of Credit (LC) Outstanding",
+   "account_name_ar": "خطابات اعتماد قائمة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8203",
+   "account_name_en": "Performance Bonds",
+   "account_name_ar": "سندات أداء",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8204",
+   "account_name_en": "Pending Litigation Provisions - Disclosed",
+   "account_name_ar": "مخصصات التقاضي المعلقة - مفصح عنها",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8205",
+   "account_name_en": "Tax Assessments Under Dispute",
+   "account_name_ar": "تقييمات ضريبية متنازع عليها",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8300",
+   "account_name_en": "Commitments (IFRS Framework)",
+   "account_name_ar": "الالتزامات التعاقدية",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8301",
+   "account_name_en": "Capital Commitments",
+   "account_name_ar": "التزامات رأسمالية",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8302",
+   "account_name_en": "Operating Lease Commitments (Pre-IFRS 16)",
+   "account_name_ar": "التزامات إيجار تشغيلي (قبل IFRS 16)",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8303",
+   "account_name_en": "Purchase Commitments",
+   "account_name_ar": "التزامات شراء",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8400",
+   "account_name_en": "Memorandum Accounts",
+   "account_name_ar": "حسابات مذكرة",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8401",
+   "account_name_en": "Goods on Consignment (Memorandum)",
+   "account_name_ar": "بضائع بالأمانة (مذكرة)",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8402",
+   "account_name_en": "Goods on Sale or Return (Memorandum)",
+   "account_name_ar": "بضائع بيع أو إرجاع (مذكرة)",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "8403",
+   "account_name_en": "Nominal / Head Office Account (Memorandum)",
+   "account_name_ar": "حساب اسمي / حساب المركز الرئيسي (مذكرة)",
+   "root_type": "Liability",
+   "account_type": "",
+   "parent_account_number": "8400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9000",
+   "account_name_en": "Cost of Goods Sold",
+   "account_name_ar": "تكلفة البضاعة المباعة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": null,
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9100",
+   "account_name_en": "Direct Material Costs",
+   "account_name_ar": "تكاليف المواد المباشرة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9101",
+   "account_name_en": "Raw Materials Consumed",
+   "account_name_ar": "المواد الخام المستهلكة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9102",
+   "account_name_en": "Packing Materials Consumed",
+   "account_name_ar": "مواد التعبئة المستهلكة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9103",
+   "account_name_en": "Purchase of Finished Goods",
+   "account_name_ar": "شراء بضاعة جاهزة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9104",
+   "account_name_en": "Direct Material Purchases (Imports)",
+   "account_name_ar": "مشتريات مواد مباشرة (واردات)",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9105",
+   "account_name_en": "Customs Duty and Import Charges",
+   "account_name_ar": "رسوم جمركية ورسوم استيراد",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9106",
+   "account_name_en": "Freight Inward",
+   "account_name_ar": "شحن داخلي",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9107",
+   "account_name_en": "Purchase Returns and Allowances",
+   "account_name_ar": "مردودات ومسموحات المشتريات",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9108",
+   "account_name_en": "Inventory Obsolescence Expense",
+   "account_name_ar": "مصروف تقادم المخزون",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9100",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9200",
+   "account_name_en": "Direct Labour Costs",
+   "account_name_ar": "تكاليف العمالة المباشرة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9201",
+   "account_name_en": "Direct Labour Wages",
+   "account_name_ar": "أجور العمالة المباشرة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9202",
+   "account_name_en": "Direct Labour Overtime",
+   "account_name_ar": "عمل إضافي - عمالة مباشرة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9203",
+   "account_name_en": "Direct Labour EOSB Provision",
+   "account_name_ar": "مخصص نهاية الخدمة - عمالة مباشرة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9200",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9300",
+   "account_name_en": "Manufacturing Overheads",
+   "account_name_ar": "التكاليف الصناعية غير المباشرة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9301",
+   "account_name_en": "Factory Rent",
+   "account_name_ar": "إيجار المصنع",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9302",
+   "account_name_en": "Factory Utilities",
+   "account_name_ar": "مرافق المصنع",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9303",
+   "account_name_en": "Factory Depreciation",
+   "account_name_ar": "استهلاك المصنع",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9304",
+   "account_name_en": "Indirect Labour",
+   "account_name_ar": "عمالة غير مباشرة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9305",
+   "account_name_en": "Factory Consumables",
+   "account_name_ar": "مواد استهلاكية للمصنع",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9306",
+   "account_name_en": "Factory Maintenance",
+   "account_name_ar": "صيانة المصنع",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9307",
+   "account_name_en": "Quality Control Costs",
+   "account_name_ar": "تكاليف مراقبة الجودة",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9308",
+   "account_name_en": "Subcontracting Costs",
+   "account_name_ar": "تكاليف التصنيع الخارجي",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9300",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9400",
+   "account_name_en": "Inventory Adjustments",
+   "account_name_ar": "تسويات المخزون",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9000",
+   "is_group": 1,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9401",
+   "account_name_en": "Inventory Variance",
+   "account_name_ar": "فروقات المخزون",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9402",
+   "account_name_en": "Stock Adjustment (Write-off)",
+   "account_name_ar": "تسوية المخزون (شطب)",
+   "root_type": "Expense",
+   "account_type": "Stock Adjustment",
+   "parent_account_number": "9400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9403",
+   "account_name_en": "Stock Adjustment (Write-down, NRV)",
+   "account_name_ar": "تسوية المخزون (تخفيض للقيمة الصافية)",
+   "root_type": "Expense",
+   "account_type": "Stock Adjustment",
+   "parent_account_number": "9400",
+   "is_group": 0,
+   "account_currency": "AED"
+  },
+  {
+   "account_number": "9404",
+   "account_name_en": "Cost of Goods Sold - Other",
+   "account_name_ar": "تكلفة البضاعة المباعة - أخرى",
+   "root_type": "Expense",
+   "account_type": "Cost of Goods Sold",
+   "parent_account_number": "9400",
+   "is_group": 0,
+   "account_currency": "AED"
+  }
+ ]
+}

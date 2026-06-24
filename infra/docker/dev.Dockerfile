@@ -20,6 +20,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         ca-certificates \
+        cron \
         curl \
         git \
         gnupg \
@@ -29,12 +30,23 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libxslt1-dev \
         libmariadb-dev \
         mariadb-client \
+        mariadb-server \
         nodejs \
         npm \
+        redis-server \
         redis-tools \
         sudo \
         tzdata \
     && rm -rf /var/lib/apt/lists/*
+
+# Install yarn 1.x from the official yarnpkg repo (Debian's yarn 0.32 is too old
+# for modern Frappe / ERPNext v15.x assets).
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor -o /usr/share/keyrings/yarn-archive-keyring.gpg \
+    && echo "deb [signed-by=/usr/share/keyrings/yarn-archive-keyring.gpg] https://dl.yarnpkg.com/debian/ stable main" \
+       > /etc/apt/sources.list.d/yarn.list \
+    && apt-get update && apt-get install -y --no-install-recommends yarn \
+    && rm -rf /var/lib/apt/lists/* \
+    && yarn --version
 
 # Install frappe-bench CLI (Frappe's own installer)
 RUN pip install --upgrade pip wheel && pip install frappe-bench

@@ -17,6 +17,7 @@ env/
 # Bench / Frappe
 *.lock
 sites/
+frappe-bench/
 *.sqlite
 *.log
 

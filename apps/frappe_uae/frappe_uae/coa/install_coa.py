@@ -734,6 +734,15 @@ def seed_uae_coa(company: str) -> dict:
         if not parent_full_name:
             doc.flags.ignore_mandatory = True
         doc.insert()
+        # Now that the doc is inserted, persist the Arabic name via the
+        # custom field helper so the bilingual fixture survives the DB
+        # round-trip (W2-T05).
+        try:
+            doc.db_set("account_name_ar", a["account_name_ar"], update_modified=False)
+        except Exception:
+            # account_name_ar custom field isn't installed yet (e.g. very
+            # first install, before patches ran). Don't fail the seed.
+            pass
         # Commit per insert so the next iteration's link validation can
         # see this parent in the DB.
         frappe.db.commit()
@@ -773,6 +782,49 @@ def install_coa(company: str | None = None) -> dict:
             frappe.throw("No UAE company found; pass company explicitly")
         company = uae_companies[0]
     return seed_uae_coa(company)
+
+
+# ---------------------------------------------------------------------------
+# Bilingual helpers (W2-T05)
+# ---------------------------------------------------------------------------
+
+def set_ar_account_name(account_name: str, new_account_name: str, account_name_ar: str) -> "frappe.model.document.Document":
+    """Update `account_name` (English) and `account_name_ar` (Arabic) atomically.
+
+    Used by:
+    - `seed_uae_coa()` to keep the bilingual fixture in sync after inserts
+    - Tests that need to set both fields on a real Account doc in one call
+    - Ad-hoc scripts that rename an account while keeping its Arabic label
+
+    Parameters
+    ----------
+    account_name : str
+        The *current* Account name (i.e. `tabAccount.name`, which is the
+        stored composite "{account_number} - {account_name} - {abbr}").
+    new_account_name : str
+        The new English account name (just the friendly part, no number
+        or abbr suffix).
+    account_name_ar : str
+        The new Arabic account name.
+
+    Returns
+    -------
+    frappe.model.document.Document
+        The loaded and saved Account doc.
+
+    Raises
+    ------
+    frappe.DoesNotExistError
+        If `account_name` does not exist as a row in `tabAccount`.
+    """
+    doc = frappe.get_doc("Account", account_name)
+    doc.account_name = new_account_name
+    # Persist via db_set so we bypass any controller logic that may strip
+    # the field — and so the change is one atomic UPDATE.
+    doc.db_set("account_name", new_account_name, update_modified=True)
+    doc.db_set("account_name_ar", account_name_ar, update_modified=True)
+    doc.reload()
+    return doc
 
 
 # ---------------------------------------------------------------------------

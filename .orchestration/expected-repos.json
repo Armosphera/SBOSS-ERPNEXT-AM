@@ -1,0 +1,22 @@
+{
+  "$schema": "https://armosphera.com/schemas/sboss-erpnext-am/expected-repos-v1.json",
+  "repos": [
+    {
+      "name": "SBOSS-ERPNEXT-AM",
+      "owner": "armosphera",
+      "url": "https://github.com/armosphera/SBOSS-ERPNEXT-AM",
+      "description": "Monorepo for Armosphera ERPNext localization platform",
+      "default_branch": "main",
+      "license": "Armosphera Proprietary (apps/) + MIT (libs/)",
+      "components": [
+        "apps/frappe_armenia",
+        "apps/frappe_uae",
+        "apps/frappe_ai_local",
+        "libs/frappe_localization_core",
+        "libs/frappe_payroll_engine",
+        "infra/",
+        "ci/"
+      ]
+    }
+  ]
+}

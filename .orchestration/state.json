@@ -1,0 +1,44 @@
+{
+  "$schema": "https://armosphera.com/schemas/sboss-erpnext-am/orchestration-state-v1.json",
+  "comments": [
+    "Tasks will be added to this file as W8-T11 (codegen-task.py) runs.",
+    "Schema: each task is { id, workstream, status, branch, pr, commit, owner, claimed_at, completed_at }",
+    "Statuses: pending, claimed, in_progress, in_review, done, blocked, cancelled",
+    "Editing this file by hand is an anti-pattern; use tools/swarm/claim-task.py and tools/swarm/release-task.py."
+  ],
+  "plan_file": ".hermes/plans/2026-06-24_142129-erpnext-armenia-uae-localization.md",
+  "tasks": {
+    "W0-T01": {
+      "branch": null,
+      "claimed_at": "2026-06-24T10:45:54.620734+00:00",
+      "commit": null,
+      "completed_at": "2026-06-24T10:46:23.337965+00:00",
+      "id": "W0-T01",
+      "owner": "t1",
+      "pr": 1,
+      "status": "done"
+    },
+    "W0-T10": {
+      "branch": null,
+      "claimed_at": "2026-06-24T10:46:23.442876+00:00",
+      "commit": null,
+      "completed_at": "2026-06-24T10:46:31.458652+00:00",
+      "id": "W0-T10",
+      "owner": "samvelstepanyan",
+      "pr": 2,
+      "status": "done"
+    },
+    "W1-T04": {
+      "branch": null,
+      "claimed_at": "2026-06-24T10:46:44.614962+00:00",
+      "commit": null,
+      "completed_at": "2026-06-24T10:46:45.365062+00:00",
+      "id": "W1-T04",
+      "owner": "samvelstepanyan",
+      "pr": 3,
+      "status": "done"
+    }
+  },
+  "updated_at": "2026-06-24T10:46:45.365235+00:00",
+  "version": "0.0.1-foundation"
+}

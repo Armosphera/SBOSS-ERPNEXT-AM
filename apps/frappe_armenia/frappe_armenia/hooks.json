@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.frappe.io/architecture/hooks",
+  "app_name": "frappe_armenia",
+  "app_title": "Armosphera Armenia Localization",
+  "app_publisher": "Armosphera",
+  "app_description": "ERPNext localization for Armenia: chart of accounts, VAT, payroll, e-invoice, banking integrations, bilingual HY/EN print formats.",
+  "app_email": "dev@armosphera.com",
+  "app_license": "Armosphera Proprietary",
+  "app_icon": "octicon octicon-globe",
+  "app_color": "#0033A0",
+  "required_apps": [
+    {"app_name": "frappe", "version": ">=15.0.0"},
+    {"app_name": "erpnext", "version": ">=15.0.0"},
+    {"app_name": "hrms",    "version": ">=15.0.0"}
+  ],
+  "depends_on_apps": ["frappe_localization_core"]
+}

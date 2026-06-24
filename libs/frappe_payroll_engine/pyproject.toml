@@ -1,0 +1,22 @@
+[build-system]
+requires = ["flit_core >=3.4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "frappe_payroll_engine"
+version = "0.1.0"
+description = "Generic payroll calculation engine for ERPNext custom apps (Armosphera)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Armosphera", email = "dev@armosphera.com" }]
+dependencies = [
+    "python-dateutil>=2.8",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "B", "UP", "RUF"]

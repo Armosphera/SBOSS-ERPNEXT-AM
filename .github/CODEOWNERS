@@ -1,0 +1,26 @@
+# CODEOWNERS
+
+# All changes require a review from the workstream owner.
+# In an early-stage repo without formal teams, this is a self-review checklist
+# enforced by AGENTS.md + the swarm CLI.
+
+# Workstream W0 (Foundation)
+/tools/                  @armosphera
+/.orchestration/         @armosphera
+/infra/                  @armosphera
+/.github/                @armosphera
+
+# Workstream W1 (Armenia)
+/apps/frappe_armenia/    @armosphera
+
+# Workstream W2 (UAE)
+/apps/frappe_uae/        @armosphera
+
+# Workstream W3 (AI)
+/apps/frappe_ai_local/   @armosphera
+
+# Workstream W4 (Shared libs)
+/libs/                   @armosphera
+
+# Documentation
+/docs/                   @armosphera

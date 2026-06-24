@@ -1,0 +1,26 @@
+[build-system]
+requires = ["flit_core >=3.4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "frappe_armenia"
+version = "0.0.1"
+description = "Armosphera ERPNext localization for Armenia (proprietary)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Armosphera Proprietary" }
+authors = [{ name = "Armosphera", email = "dev@armosphera.com" }]
+dependencies = [
+    "frappe~=15.3.0",
+    "erpnext~=15.3.0",
+    "hrms~=15.0.0",
+    "frappe-localization-core>=0.1.0",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "B", "UP", "RUF"]
+ignore = ["E501"]

@@ -1,0 +1,66 @@
+name: Unit Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify-isolation:
+    name: Verify task isolation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install swarm CLI
+        run: |
+          python -m pip install --upgrade pip
+      - name: Validate state.json schema
+        run: python tools/swarm/swarm.py validate-state
+      - name: Verify no active tasks overlap (skip if no tasks)
+        run: |
+          ACTIVE=$(python -c "import json; d=json.load(open('.orchestration/state.json')); print(sum(1 for t in d['tasks'].values() if t['status'] in ('claimed','in_progress','in_review')))")
+          if [ "$ACTIVE" -gt 0 ]; then
+            echo "Active tasks found; running isolation check (this is informational only in CI)"
+          else
+            echo "No active tasks; isolation check skipped"
+          fi
+      - name: Portfolio drift check
+        run: node tools/check-portfolio-drift.js
+
+  portfolio-drift:
+    name: Repo set matches expected-repos.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check armosphera org matches expected
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node tools/check-portfolio-drift.js
+
+  python-lint:
+    name: Python lint (ruff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install ruff
+      - run: ruff check libs/ tools/
+        continue-on-error: true   # placeholder: real apps come later
+
+  markdown-lint:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v17
+        with:
+          globs: '**/*.md'

@@ -1,0 +1,31 @@
+name: Upstream Sync
+
+on:
+  schedule:
+    # Weekly on Monday at 04:00 UTC
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    name: Sync upstream ERPNext / Frappe / HRMS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - name: Detect upstream changes
+        id: detect
+        run: |
+          bash infra/scripts/sync-upstream.sh detect
+      - name: Open sync PR if changes detected
+        if: steps.detect.outputs.changes == 'true'
+        run: |
+          bash infra/scripts/sync-upstream.sh open-pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run tests if changes detected
+        if: steps.detect.outputs.changes == 'true'
+        run: |
+          bash infra/scripts/sync-upstream.sh test

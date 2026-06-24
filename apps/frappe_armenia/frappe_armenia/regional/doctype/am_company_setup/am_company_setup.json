@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "creation": "2026-06-24 13:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "section_break_tax",
+  "taxpayer_identification_number",
+  "registration_number",
+  "legal_form",
+  "vat_treatment",
+  "column_break_default_bank",
+  "default_bank",
+  "section_break_address",
+  "address",
+  "section_break_einvoice",
+  "e_invoice_provider"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_tax",
+   "fieldtype": "Section Break",
+   "label": "Tax Registration"
+  },
+  {
+   "fieldname": "taxpayer_identification_number",
+   "fieldtype": "Data",
+   "label": "TIN (HHID / \u0540\u054e\u0540\u0540)",
+   "length": 8,
+   "reqd": 1,
+   "in_list_view": 1,
+   "description": "8-digit Armenian taxpayer identification number per Tax Code Article 52"
+  },
+  {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "State Registration \u2116",
+   "reqd": 1,
+   "description": "State registration number from the Ministry of Justice"
+  },
+  {
+   "fieldname": "legal_form",
+   "fieldtype": "Select",
+   "label": "Legal Form",
+   "options": "\nLLC\nJSC\nSole Proprietor\nBranch\nRepresentative Office\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vat_treatment",
+   "fieldtype": "Select",
+   "label": "VAT Treatment",
+   "options": "\nStandard\nExempt\nReverse Charge\nNot Registered",
+   "reqd": 1,
+   "default": "Standard"
+  },
+  {
+   "fieldname": "column_break_default_bank",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_bank",
+   "fieldtype": "Link",
+   "label": "Default Bank",
+   "options": "Bank",
+   "depends_on": "eval:doc.vat_treatment=='Standard'"
+  },
+  {
+   "fieldname": "section_break_address",
+   "fieldtype": "Section Break",
+   "label": "Registered Address"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text Editor",
+   "label": "Address"
+  },
+  {
+   "fieldname": "section_break_einvoice",
+   "fieldtype": "Section Break",
+   "label": "E-Invoice"
+  },
+  {
+   "fieldname": "e_invoice_provider",
+   "fieldtype": "Link",
+   "label": "E-Invoice Provider",
+   "options": "AM E-Invoice Provider"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-24 13:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "frappe_armenia",
+ "name": "AM Company Setup",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "custom": 1
+}

@@ -58,3 +58,4 @@ htmlcov/
 *.key
 *.crt
 secrets/
+.gstack/

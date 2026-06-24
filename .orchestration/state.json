@@ -722,11 +722,11 @@
       "branch": null,
       "claimed_at": "2026-06-24T18:45:43.612273+00:00",
       "commit": null,
-      "completed_at": null,
+      "completed_at": "2026-06-24T18:50:52.010804+00:00",
       "id": "W2-T05",
       "owner": "agent-W2a",
-      "pr": null,
-      "status": "claimed"
+      "pr": 6,
+      "status": "done"
     },
     "W2-T06": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-24T18:49:17.199139+00:00",
+  "updated_at": "2026-06-24T18:50:52.010977+00:00",
   "version": "0.0.1-foundation"
 }

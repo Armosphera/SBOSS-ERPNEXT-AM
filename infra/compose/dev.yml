@@ -23,7 +23,7 @@ services:
 
   bench:
     build:
-      context: ../..
+      context: ${SBOSS_REPO:-/Users/samvelstepanyan/Desktop/SBOSS-ERPNEXT-AM}
       dockerfile: infra/docker/dev.Dockerfile
     image: sboss-dev:latest
     restart: unless-stopped
@@ -37,7 +37,7 @@ services:
       - "9000:9000"   # Socket.IO
       - "11434:11434" # Ollama
     volumes:
-      - ..:/workspace
+      - ${SBOSS_REPO:-/Users/samvelstepanyan/Desktop/SBOSS-ERPNEXT-AM}:/workspace
     command: >
       bash -c "
         echo 'Container started; bench-init is idempotent and safe to re-run' &&

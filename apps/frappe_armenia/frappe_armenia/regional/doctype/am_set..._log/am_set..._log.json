@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "creation": "2026-06-24 19:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "country",
+  "default_currency",
+  "status",
+  "section_break_lifecycle",
+  "started_at",
+  "completed_at",
+  "section_break_results",
+  "accounts_seeded",
+  "custom_fields_registered"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Data",
+   "label": "Default Currency",
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nInvited\nStarted\nSkipped\nCompleted",
+   "default": "Invited",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_lifecycle",
+   "fieldtype": "Section Break",
+   "label": "Lifecycle"
+  },
+  {
+   "fieldname": "started_at",
+   "fieldtype": "Datetime",
+   "label": "Started At"
+  },
+  {
+   "fieldname": "completed_at",
+   "fieldtype": "Datetime",
+   "label": "Completed At"
+  },
+  {
+   "fieldname": "section_break_results",
+   "fieldtype": "Section Break",
+   "label": "Results"
+  },
+  {
+   "fieldname": "accounts_seeded",
+   "fieldtype": "Int",
+   "label": "Accounts Seeded",
+   "default": "0"
+  },
+  {
+   "fieldname": "custom_fields_registered",
+   "fieldtype": "Check",
+   "label": "Custom Fields Registered",
+   "default": "0"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-24 19:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "frappe_armenia",
+ "name": "AM Setup Wizard Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "custom": 1
+}

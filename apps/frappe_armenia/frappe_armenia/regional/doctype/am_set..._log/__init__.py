@@ -1,0 +1,1 @@
+"""AM Setup Wizard Log DocType folder."""

@@ -25,3 +25,14 @@ custom_fields = {
         }
     ],
 }
+
+# Document-event hooks (W1-T06).
+# On Company creation, write an Invited row to the AM Setup Wizard Log.
+# The user-driven wizard UI (or bench execute) then triggers
+# ``frappe_armenia.setup_wizard.run_armenian_setup`` which does the
+# actual COA seeding and custom-field registration.
+doc_events = {
+    "Company": {
+        "after_insert": "frappe_armenia.setup_wizard.on_company_created.on_company_created",
+    },
+}

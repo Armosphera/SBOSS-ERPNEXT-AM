@@ -302,21 +302,21 @@
       "branch": null,
       "claimed_at": "2026-06-24T18:45:43.557358+00:00",
       "commit": null,
-      "completed_at": null,
+      "completed_at": "2026-06-24T18:55:49.753392+00:00",
       "id": "W1-T05",
       "owner": "agent-W1a",
-      "pr": null,
-      "status": "claimed"
+      "pr": 7,
+      "status": "done"
     },
     "W1-T06": {
       "branch": null,
-      "claimed_at": null,
+      "claimed_at": "2026-06-24T18:58:16.469864+00:00",
       "commit": null,
-      "completed_at": null,
+      "completed_at": "2026-06-25T11:09:57.005259+00:00",
       "id": "W1-T06",
-      "owner": null,
-      "pr": null,
-      "status": "pending"
+      "owner": "agent-W1a",
+      "pr": 10,
+      "status": "done"
     },
     "W1-T07": {
       "branch": null,
@@ -730,13 +730,13 @@
     },
     "W2-T06": {
       "branch": null,
-      "claimed_at": null,
+      "claimed_at": "2026-06-24T18:58:16.508541+00:00",
       "commit": null,
       "completed_at": null,
       "id": "W2-T06",
-      "owner": null,
+      "owner": "agent-W2a",
       "pr": null,
-      "status": "pending"
+      "status": "claimed"
     },
     "W2-T07": {
       "branch": null,
@@ -1640,13 +1640,13 @@
     },
     "W4-T03": {
       "branch": null,
-      "claimed_at": null,
+      "claimed_at": "2026-06-24T18:58:16.546662+00:00",
       "commit": null,
-      "completed_at": null,
+      "completed_at": "2026-06-25T10:57:11.589913+00:00",
       "id": "W4-T03",
-      "owner": null,
-      "pr": null,
-      "status": "pending"
+      "owner": "agent-W4",
+      "pr": 9,
+      "status": "done"
     },
     "W4-T04": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-24T18:50:52.010977+00:00",
+  "updated_at": "2026-06-25T11:09:57.005552+00:00",
   "version": "0.0.1-foundation"
 }

@@ -220,13 +220,13 @@
     },
     "W0-T22": {
       "branch": null,
-      "claimed_at": null,
+      "claimed_at": "2026-06-24T19:15:32.979643+00:00",
       "commit": null,
       "completed_at": null,
       "id": "W0-T22",
-      "owner": null,
+      "owner": "agent-W0a",
       "pr": null,
-      "status": "pending"
+      "status": "claimed"
     },
     "W0-T23": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-24T18:50:52.010977+00:00",
+  "updated_at": "2026-06-24T19:15:32.979851+00:00",
   "version": "0.0.1-foundation"
 }

@@ -7,16 +7,7 @@ app_license = "Armosphera Proprietary"
 
 required_apps = ["frappe", "erpnext", "hrms"]
 
-# Custom Fields installed by frappe_uae on site install / migrate.
-# The standard Frappe convention is to expose a module attribute that
-# returns either:
-#   - a list of {"dt": ..., "fieldname": ..., ...} dicts, OR
-#   - a dict of {doctype: [field-dict, ...]}
-# Hook handlers may also be defined under "fixture" hooks; we keep this
-# simple by returning a dict from frappe_uae.custom_fields.CUSTOM_FIELDS.
-#
-# Reference: https://frappeframework.com/docs/v15/user/en/python-api/hooks
-# (Search "custom_fields" in the hooks documentation.)
+# Custom fields registered on site install / bench migrate.
 custom_fields = {
     "Account": [
         {
@@ -27,6 +18,15 @@ custom_fields = {
             "depends_on": "eval:doc.company",
             "read_only": 0,
             "hidden": 0,
+            "translatable": 0,
+            "description": "Bilingual Arabic name for the account. Set by the UAE COA seeder.",
         }
-    ]
+    ],
+}
+
+# Document-event hooks (W2-T06).
+doc_events = {
+    "Company": {
+        "after_insert": "frappe_uae.setup_wizard.on_company_created.on_company_created",
+    },
 }

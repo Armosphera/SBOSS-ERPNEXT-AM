@@ -312,11 +312,11 @@
       "branch": null,
       "claimed_at": "2026-06-24T18:58:16.469864+00:00",
       "commit": null,
-      "completed_at": null,
+      "completed_at": "2026-06-25T11:09:57.005259+00:00",
       "id": "W1-T06",
       "owner": "agent-W1a",
-      "pr": null,
-      "status": "claimed"
+      "pr": 10,
+      "status": "done"
     },
     "W1-T07": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-25T10:57:11.590160+00:00",
+  "updated_at": "2026-06-25T11:09:57.005552+00:00",
   "version": "0.0.1-foundation"
 }

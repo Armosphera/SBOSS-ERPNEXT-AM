@@ -729,14 +729,14 @@
       "status": "done"
     },
     "W2-T06": {
-      "branch": null,
-      "claimed_at": "2026-06-24T18:58:16.508541+00:00",
-      "commit": null,
-      "completed_at": null,
+      "branch": "feat/uae/w2-t06-setup-wizard",
+      "claimed_at": "2026-06-24T22:46:18Z",
+      "commit": "f3eadf0",
+      "completed_at": "2026-06-25T22:00:00Z",
       "id": "W2-T06",
       "owner": "agent-W2a",
-      "pr": null,
-      "status": "claimed"
+      "pr": 11,
+      "status": "done"
     },
     "W2-T07": {
       "branch": null,

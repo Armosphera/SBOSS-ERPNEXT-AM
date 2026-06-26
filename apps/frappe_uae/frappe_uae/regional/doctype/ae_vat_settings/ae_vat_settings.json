@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "creation": "2026-06-26 14:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "section_break_default_rates",
+  "default_vat_rate",
+  "vat_period",
+  "vat_authority",
+  "vat_return_template",
+  "section_break_advanced",
+  "exempt_categories",
+  "reverse_charge_account",
+  "reverse_charge_enabled",
+  "voluntary_disclosure_period_months",
+  "section_break_einvoicing",
+  "e_invoicing_enabled",
+  "e_invoicing_provider",
+  "e_invoicing_phase",
+  "e_invoicing_pilot_start_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_default_rates",
+   "fieldtype": "Section Break",
+   "label": "Filing"
+  },
+  {
+   "fieldname": "default_vat_rate",
+   "fieldtype": "Percent",
+   "label": "Default VAT Rate",
+   "default": "5",
+   "reqd": 1,
+   "description": "Standard VAT rate applied to taxable supplies (UAE Federal Tax Authority: 5%)"
+  },
+  {
+   "fieldname": "vat_period",
+   "fieldtype": "Select",
+   "label": "VAT Period",
+   "options": "Monthly\nQuarterly",
+   "default": "Quarterly",
+   "description": "UAE businesses file VAT returns quarterly by default"
+  },
+  {
+   "fieldname": "vat_authority",
+   "fieldtype": "Data",
+   "label": "VAT Authority",
+   "default": "Federal Tax Authority"
+  },
+  {
+   "fieldname": "vat_return_template",
+   "fieldtype": "Data",
+   "label": "VAT Return Template",
+   "description": "Path or URL to the FTA-approved VAT return form template"
+  },
+  {
+   "fieldname": "section_break_advanced",
+   "fieldtype": "Section Break",
+   "label": "Advanced"
+  },
+  {
+   "fieldname": "exempt_categories",
+   "fieldtype": "Text",
+   "label": "Exempt Categories",
+   "description": "One per line. Categories of supply exempt from VAT under UAE Federal Decree-Law No. 8 of 2017 Article 46."
+  },
+  {
+   "fieldname": "reverse_charge_account",
+   "fieldtype": "Data",
+   "label": "Reverse Charge Account",
+   "description": "Account code for reverse-charge VAT"
+  },
+  {
+   "fieldname": "reverse_charge_enabled",
+   "fieldtype": "Check",
+   "label": "Reverse Charge Enabled",
+   "default": "1",
+   "description": "Whether reverse-charge VAT applies to imported services"
+  },
+  {
+   "fieldname": "voluntary_disclosure_period_months",
+   "fieldtype": "Int",
+   "label": "Voluntary Disclosure Period (months)",
+   "default": "5",
+   "description": "How far back a company can voluntarily disclose VAT errors before FTA treats it as non-compliance (Cabinet Decision 52/2017)"
+  },
+  {
+   "fieldname": "section_break_einvoicing",
+   "fieldtype": "Section Break",
+   "label": "E-Invoicing"
+  },
+  {
+   "fieldname": "e_invoicing_enabled",
+   "fieldtype": "Check",
+   "label": "E-Invoicing Enabled",
+   "default": "0",
+   "description": "Whether this company submits invoices via Peppol / Accredited Service Provider"
+  },
+  {
+   "fieldname": "e_invoicing_provider",
+   "fieldtype": "Select",
+   "label": "E-Invoicing Provider",
+   "options": "None\nDatapel\nTamara\nZATCA",
+   "default": "Datapel",
+   "depends_on": "eval:doc.e_invoicing_enabled"
+  },
+  {
+   "fieldname": "e_invoicing_phase",
+   "fieldtype": "Select",
+   "label": "E-Invoicing Phase",
+   "options": "Pilot\nPhase1\nPhase2\nNone",
+   "default": "None",
+   "depends_on": "eval:doc.e_invoicing_enabled"
+  },
+  {
+   "fieldname": "e_invoicing_pilot_start_date",
+   "fieldtype": "Date",
+   "label": "E-Invoicing Pilot Start Date",
+   "depends_on": "eval:doc.e_invoicing_enabled"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-06-26 14:30:00.000000",
+ "module": "uae",
+ "name": "AE VAT Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "custom": 1
+}

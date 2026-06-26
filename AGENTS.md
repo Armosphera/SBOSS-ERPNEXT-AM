@@ -12,7 +12,7 @@ production-grade Frappe custom apps on top of upstream ERPNext v15.x:
 |---|---|---|
 | `apps/frappe_armenia` | Armenia | COA, VAT 20%, profit tax 18%, e-invoice, payroll, banking, HY/EN bilingual |
 | `apps/frappe_uae`     | UAE     | VAT 5%, corporate tax 9%, e-invoicing (Peppol), EOSB, Arabic RTL, banking |
-| `apps/frappe_ai_local` | Both  | Local-LLM AI agent + chat (Ollama + Gemma 4 4B), offline-capable, HY/AR/EN |
+| `apps/frappe_ai_local` | Both  | Local-LLM AI agent + chat (Ollama + Gemma 4 E2B (Q4_K_M)), offline-capable, HY/AR/EN |
 
 Two shared libraries under `libs/` (MIT):
 - `frappe_localization_core` — country-agnostic helpers (number-to-words, IBAN, ISO20022, MT940, currency)

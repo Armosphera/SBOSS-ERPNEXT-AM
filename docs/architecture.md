@@ -38,7 +38,7 @@
 │  ┌───────────────────────────────────────────────────────────────┐  │
 │  │  Local LLM layer (apps/frappe_ai_local)                      │  │
 │  │  ┌──────────────┐    ┌──────────────────┐   ┌──────────────┐  │  │
-│  │  │ Ollama       │───▶│ Gemma 4 4B       │   │ ChromaDB     │  │  │
+│  │  │ Ollama       │───▶│ Gemma 4 E2B (Q4_K_M)       │   │ ChromaDB     │  │  │
 │  │  │ (sidecar)    │    │ (GGUF, offline)  │   │ (embedded)   │  │  │
 │  │  └──────────────┘    └──────────────────┘   └──────────────┘  │  │
 │  │          │                     │                    │         │  │
@@ -228,4 +228,4 @@ update.** This is a hard requirement, not a stretch goal. Concretely:
 - **UAE customers:** `me-central-1` (AWS UAE) or self-hosted in UAE for
   data-residency compliance.
 - **AI inference:** Ollama as a sidecar to the bench container, in the same
-  VPC. GPU optional (CPU works for Gemma 4 4B at ~5–10 tokens/sec).
+  VPC. GPU optional (CPU works for Gemma 4 E2B (Q4_K_M) at ~5–10 tokens/sec).

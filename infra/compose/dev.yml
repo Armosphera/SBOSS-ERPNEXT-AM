@@ -35,7 +35,6 @@ services:
     ports:
       - "8000:8000"   # Frappe web
       - "9000:9000"   # Socket.IO
-      - "11434:11434" # Ollama
     volumes:
       - ${SBOSS_REPO:-/Users/samvelstepanyan/Desktop/SBOSS-ERPNEXT-AM}:/workspace
     command: >
@@ -50,7 +49,9 @@ services:
     volumes:
       - ollama-data:/root/.ollama
     profiles: ["ollama"]   # opt-in: docker compose --profile ollama up
-    # 4B model runs fine on CPU; uncomment for GPU:
+    ports:
+      - "11434:11434"   # Ollama HTTP API (gemma4:e2b, requires 10+ GB Docker memory)
+    # Full Q4_K_M Gemma 4 E2B; uncomment for GPU:
     # deploy:
     #   resources:
     #     reservations:
@@ -67,8 +68,8 @@ services:
     entrypoint: ["/bin/sh", "-c"]
     command: >
       "until curl -s http://ollama:11434/api/version >/dev/null; do sleep 2; done &&
-       echo '==> Pulling gemma4:4b (Gemma 4 4B GGUF)' &&
-       curl -X POST http://ollama:11434/api/pull -d '{\"name\":\"gemma4:4b\"}' &&
+       echo '==> Pulling gemma4:e2b (Gemma 4 Effective 2B, Q4_K_M 7.2 GB)' &&
+       curl -X POST http://ollama:11434/api/pull -d '{\"name\":\"gemma4:e2b\"}' &&
        echo 'done'"
 
 volumes:

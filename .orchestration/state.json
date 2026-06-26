@@ -770,13 +770,13 @@
     },
     "W2-T12": {
       "branch": null,
-      "claimed_at": null,
+      "claimed_at": "2026-06-26T19:11:58.850268+00:00",
       "commit": null,
       "completed_at": null,
       "id": "W2-T12",
-      "owner": null,
+      "owner": "mavis-uae",
       "pr": null,
-      "status": "pending"
+      "status": "claimed"
     },
     "W2-T13": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-26T19:09:25.754142+00:00",
+  "updated_at": "2026-06-26T19:11:58.850459+00:00",
   "version": "0.0.1-foundation"
 }

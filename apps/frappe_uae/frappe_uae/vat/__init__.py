@@ -1,13 +1,17 @@
-"""frappe_uae.vat -- UAE VAT settings and helpers.
+"""frappe_uae.vat -- UAE VAT settings, helpers, and validation hooks.
 
-Singleton-per-company helpers that ensure an AE VAT Settings row exists
-for every UAE-jurisdiction Company and exposes a single
-get_vat_settings(company) -> AEVATSettings entry point.
+Mirrors ``frappe_armenia.vat`` (W1-T12 / W1-T14) so the two apps look
+symmetric and easy to extend. UAE specifics:
+  - Default rate 5% (UAE Federal Tax Authority)
+  - Federal Decree-Law No. 8 of 2017 + Cabinet Decision 52/2017 Articles 30-46
+  - Default filing period: Quarterly (vs Armenia Monthly)
+  - Reverse-charge handling symmetric to Armenia
+
+Module-level constants mirror the field names registered on the standard
+Item DocType (see ``custom_fields.py``).
 """
 from __future__ import annotations
 
-import json
-import os
 from typing import Any
 
 import frappe
@@ -15,9 +19,29 @@ import frappe
 
 DOCTYPE = "AE VAT Settings"
 
+# Mirrors Item custom-field names registered in custom_fields.py.
+AE_VAT_FIELD_STANDARD = "ae_vat_standard_rate"
+AE_VAT_FIELD_EXPORT = "ae_vat_export_rate"
+AE_VAT_FIELD_EXEMPT = "ae_vat_is_exempt"
+AE_VAT_FIELD_REVERSE = "ae_vat_reverse_charge"
+
+# Per-item default VAT shape (used by get_item_vat when fields are absent).
+DEFAULT_ITEM_VAT = {
+    AE_VAT_FIELD_STANDARD: 5.0,
+    AE_VAT_FIELD_EXPORT: 0.0,
+    AE_VAT_FIELD_EXEMPT: 0,
+    AE_VAT_FIELD_REVERSE: 0,
+}
+
+ITEM_VAT_FIELDS = (
+    AE_VAT_FIELD_STANDARD,
+    AE_VAT_FIELD_EXPORT,
+    AE_VAT_FIELD_EXEMPT,
+    AE_VAT_FIELD_REVERSE,
+)
+
 
 def _table_exists() -> bool:
-    """Check if the AE VAT Settings table exists, bypassing Frappe's cache."""
     rows = frappe.db.sql(
         "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES "
         "WHERE TABLE_SCHEMA = %s AND TABLE_NAME = %s",
@@ -27,61 +51,75 @@ def _table_exists() -> bool:
     return bool(rows)
 
 
-def _find_vat_dir() -> str:
-    """Find the actual directory name for AE VAT Settings at runtime.
-
-    The folder name was sanitized during the write_file that created it,
-    so we discover it dynamically by scanning the regional/doctype dir.
-    """
-    base = frappe.get_app_path("frappe_uae", "regional", "doctype")
-    if not os.path.isdir(base):
-        raise FileNotFoundError(f"AE VAT Settings base directory not found: {base}")
-    for n in os.listdir(base):
-        full = os.path.join(base, n)
-        if not os.path.isdir(full) or n.startswith("__"):
+def get_item_vat(item_code: str) -> dict[str, Any]:
+    """Return the UAE VAT fields for item_code with safe defaults."""
+    result = dict(DEFAULT_ITEM_VAT)
+    if not frappe.db.exists("Item", item_code):
+        return result
+    row = frappe.db.get_value(
+        "Item", item_code, list(ITEM_VAT_FIELDS), as_dict=True,
+    ) or {}
+    for k in ITEM_VAT_FIELDS:
+        v = row.get(k)
+        if v is None:
             continue
-        json_path = os.path.join(full, n + ".json")
-        if os.path.isfile(json_path):
-            try:
-                with open(json_path) as f:
-                    data = json.load(f)
-                if data.get("name") == DOCTYPE:
-                    return n
-            except (json.JSONDecodeError, OSError):
-                continue
-    raise FileNotFoundError(f"Could not find directory containing DocType {DOCTYPE!r} in {base}")
+        result[k] = v
+    return result
 
 
 def _ensure_doctype_record() -> None:
-    """Insert the AE VAT Settings DocType record if missing."""
     if frappe.db.exists("DocType", DOCTYPE):
         return
-    dir_name = _find_vat_dir()
-    base = frappe.get_app_path("frappe_uae", "regional", "doctype", dir_name)
-    json_path = os.path.join(base, dir_name + ".json")
-    with open(json_path) as f:
-        data = json.load(f)
-    data["custom"] = 1
-    data.pop("__islocal", None)
-    data.pop("__unsaved", None)
-    doc = frappe.get_doc(data)
-    doc.insert(ignore_permissions=True)
-    frappe.db.commit()
+    base = frappe.get_app_path("frappe_uae", "regional", "doctype")
+    if not frappe.os.path.isdir(base):
+        return
+    for n in frappe.os.listdir(base):
+        full = frappe.os.path.join(base, n)
+        if not frappe.os.path.isdir(full) or n.startswith("__"):
+            continue
+        json_path = frappe.os.path.join(full, n + ".json")
+        if not frappe.os.path.isfile(json_path):
+            continue
+        try:
+            with open(json_path) as f:
+                data = frappe.json.loads(f.read())
+        except (frappe.json.JSONDecodeError, OSError):
+            continue
+        if data.get("name") == DOCTYPE:
+            data["custom"] = 1
+            data.pop("__islocal", None)
+            data.pop("__unsaved", None)
+            doc = frappe.get_doc(data)
+            doc.insert(ignore_permissions=True)
+            frappe.db.commit()
+            return
 
 
 def _ensure_table() -> None:
-    """Create the AE VAT Settings table on demand, mirroring the JSON shape.
-
-    NOTE: 'Settings' is a reserved keyword in MariaDB, so the table
-    name must always be quoted with backticks.
-    """
     if _table_exists():
         return
-    dir_name = _find_vat_dir()
-    base = frappe.get_app_path("frappe_uae", "regional", "doctype", dir_name)
-    json_path = os.path.join(base, dir_name + ".json")
+    base = frappe.get_app_path("frappe_uae", "regional", "doctype")
+    if not frappe.os.path.isdir(base):
+        return
+    json_path = None
+    for n in frappe.os.listdir(base):
+        full = frappe.os.path.join(base, n)
+        if not frappe.os.path.isdir(full) or n.startswith("__"):
+            continue
+        candidate = frappe.os.path.join(full, n + ".json")
+        if frappe.os.path.isfile(candidate):
+            try:
+                with open(candidate) as f:
+                    data = frappe.json.loads(f.read())
+                if data.get("name") == DOCTYPE:
+                    json_path = candidate
+                    break
+            except (frappe.json.JSONDecodeError, OSError):
+                continue
+    if not json_path:
+        return
     with open(json_path) as f:
-        data = json.load(f)
+        data = frappe.json.loads(f.read())
 
     seen = set()
     cols = [
@@ -103,12 +141,11 @@ def _ensure_table() -> None:
         "Percent": "decimal(21,9) NOT NULL DEFAULT 0",
         "Currency": "decimal(21,9) NOT NULL DEFAULT 0",
         "Datetime": "datetime(6) DEFAULT NULL",
-        "Date": "date DEFAULT NULL",
-        "Link": "varchar(140) DEFAULT NULL",
-        "Select": "varchar(140) DEFAULT NULL",
+        "Link": "varchar({length}) DEFAULT NULL",
+        "Select": "varchar({length}) DEFAULT NULL",
         "Text": "longtext",
     }
-    for f in data["fields"]:
+    for f in data.get("fields", []):
         fname = f.get("fieldname")
         ftype = f.get("fieldtype", "Data")
         if not fname or fname in seen:
@@ -136,12 +173,10 @@ def _ensure_table() -> None:
     frappe.cache.delete_value("db_tables")
 
 
-def get_vat_settings(company: str) -> Any:
+def get_ae_vat_settings(company: str) -> Any:
     """Return the AEVATSettings doc for ``company``, creating one with
-    spec defaults if none exists.
-
-    Returns the Document instance, or None if the DocType is not
-    installed on this site yet.
+    spec defaults if none exists. Returns the Document instance, or None
+    if the DocType is not installed on this site yet.
     """
     if not frappe.db.exists("Company", company):
         raise ValueError(f"Company {company!r} does not exist")
@@ -167,46 +202,79 @@ def get_vat_settings(company: str) -> Any:
     return doc
 
 
-__all__ = ["DOCTYPE", "get_vat_settings"]
+def expected_item_vat_uae(net_amount: float, item_vat: dict) -> float:
+    """Compute the expected OUTPUT VAT for a Sales Invoice line, per
+    UAE Federal Decree-Law No. 8 of 2017 + Cabinet Decision 52/2017.
 
-
-
-# --- Item-level VAT fields (W2-T11) ---
-
-ITEM_VAT_FIELDS = (
-    "ae_vat_standard_rate",
-    "ae_vat_export_rate",
-    "ae_vat_is_exempt",
-    "ae_vat_reverse_charge",
-)
-
-DEFAULT_ITEM_VAT = {
-    "ae_vat_standard_rate": 5.0,
-    "ae_vat_export_rate": 0.0,
-    "ae_vat_is_exempt": 0,
-    "ae_vat_reverse_charge": 0,
-}
-
-
-def get_item_vat(item_code):
-    """Return the UAE VAT fields for item_code.
-
-    Uses safe defaults if the Item doesn't exist or the custom fields
-    aren't populated yet.
+    Returns Decimal amount of expected VAT to appear on the sales line.
     """
-    result = dict(DEFAULT_ITEM_VAT)
-    if not frappe.db.exists("Item", item_code):
-        return result
-    row = frappe.db.get_value(
-        "Item", item_code, list(ITEM_VAT_FIELDS), as_dict=True,
-    ) or {}
-    for k in ITEM_VAT_FIELDS:
-        v = row.get(k)
-        if v is None:
+    if int(item_vat.get(AE_VAT_FIELD_EXEMPT, 0) or 0):
+        return float(0)
+    if int(item_vat.get(AE_VAT_FIELD_REVERSE, 0) or 0):
+        # Reverse-charge on a sale: the supplier's invoice shows 0 VAT;
+        # the buyer self-assesses.
+        return float(0)
+    if AE_VAT_FIELD_EXPORT in item_vat:
+        rate_val = item_vat.get(AE_VAT_FIELD_EXPORT, 0.0)
+    else:
+        rate_val = item_vat.get(AE_VAT_FIELD_STANDARD)
+    rate = float(rate_val) if rate_val is not None else 5.0
+    return round(float(net_amount) * rate / 100.0, 2)
+
+
+def validate_sales_invoice_vat_uae(doc, method=None):
+    """Validate that each Sales Invoice line's VAT matches UAE Federal
+    Decree-Law No. 8 of 2017 + Cabinet Decision 52/2017 (Articles 30-46).
+
+    Registered as a doc_events hook on Sales Invoice "on_submit".
+    Raises frappe.ValidationError with a clear message if any line's
+    VAT doesn't match the expected value.
+    """
+    company = getattr(doc, "company", None)
+    if not company:
+        return
+
+    company_vat = get_ae_vat_settings(company)
+    if company_vat is None:
+        return
+
+    computed_total_vat = 0.0
+    for idx, item in enumerate(doc.items or []):
+        item_code = getattr(item, "item_code", None)
+        if not item_code:
             continue
-        result[k] = v
-    return result
+
+        item_vat = get_item_vat(item_code)
+        net_amount = float(getattr(item, "net_amount", 0) or 0)
+        actual_vat = float(getattr(item, "tax_amount", 0) or 0)
+        expected_vat = expected_item_vat_uae(net_amount, item_vat)
+
+        if round(actual_vat, 2) != round(expected_vat, 2):
+            rate = float(
+                item_vat.get(AE_VAT_FIELD_STANDARD, 5.0) or 5.0
+            )
+            frappe.throw(
+                f"Line {idx+1} ({item_code!r}): expected VAT {expected_vat} "
+                f"at {rate}% on net {net_amount}, got {actual_vat}."
+            )
+
+        computed_total_vat += expected_vat
+
+    # Sanity-check invoice total against per-item sum; tolerate ERPNext
+    # resetting total_taxes_and_charges to 0 when no Item Tax Template.
+    invoice_total_vat = float(getattr(doc, "total_taxes_and_charges", 0) or 0)
+    if invoice_total_vat > 0 and abs(invoice_total_vat - round(computed_total_vat, 2)) > 0.05:
+        frappe.throw(
+            f"Invoice VAT total {invoice_total_vat} does not match the sum of "
+            f"per-item VATs {round(computed_total_vat, 2)}."
+        )
 
 
-__all__ = ["DOCTYPE", "get_vat_settings",
-           "ITEM_VAT_FIELDS", "DEFAULT_ITEM_VAT", "get_item_vat"]
+__all__ = [
+    "DOCTYPE",
+    "AE_VAT_FIELD_STANDARD", "AE_VAT_FIELD_EXPORT",
+    "AE_VAT_FIELD_EXEMPT", "AE_VAT_FIELD_REVERSE",
+    "ITEM_VAT_FIELDS", "DEFAULT_ITEM_VAT", "get_item_vat",
+    "get_ae_vat_settings",
+    "expected_item_vat_uae", "validate_sales_invoice_vat_uae",
+]

@@ -24,9 +24,15 @@ custom_fields = {
     ],
 }
 
-# Document-event hooks (W2-T06).
+# Document-event hooks (W2-T06 + W2-T12).
+# On Sales Invoice submit, validate each line item's VAT against the
+# UAE Federal Decree-Law No. 8 of 2017 + Cabinet Decision 52/2017
+# Articles 30-46 (default rate 5%).
 doc_events = {
     "Company": {
         "after_insert": "frappe_uae.setup_wizard.on_company_created.on_company_created",
+    },
+    "Sales Invoice": {
+        "on_submit": "frappe_uae.vat.validate_sales_invoice_vat_uae",
     },
 }

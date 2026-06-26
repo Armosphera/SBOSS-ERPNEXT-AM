@@ -36,3 +36,13 @@ doc_events = {
         "after_insert": "frappe_armenia.setup_wizard.on_company_created.on_company_created",
     },
 }
+
+
+# Document-event hooks (W1-T12).
+# On Sales Invoice submit, validate each line item's VAT against the
+# Armenian Tax Code Articles 65-68.
+doc_events = {
+    "Sales Invoice": {
+        "on_submit": "frappe_armenia.vat.validate_invoice_vat",
+    },
+}

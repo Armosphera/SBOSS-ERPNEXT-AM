@@ -749,14 +749,14 @@
       "status": "pending"
     },
     "W2-T10": {
-      "branch": null,
-      "claimed_at": null,
-      "commit": null,
-      "completed_at": null,
+      "branch": "feat/uae/w2-t10-vat-settings",
+      "claimed_at": "2026-06-26T14:15:34Z",
+      "commit": "main",
+      "completed_at": "2026-06-26T22:00:00Z",
       "id": "W2-T10",
-      "owner": null,
-      "pr": null,
-      "status": "pending"
+      "owner": "agent-W2a",
+      "pr": 15,
+      "status": "done"
     },
     "W2-T11": {
       "branch": null,

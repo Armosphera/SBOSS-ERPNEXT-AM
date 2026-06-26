@@ -3,9 +3,9 @@
 [![License: Armosphera Proprietary](https://img.shields.io/badge/license-Armosphera%20Proprietary-red)](./LICENSE-ARMOSPHERA.md)
 [![ERPNext](https://img.shields.io/badge/ERPNext-v15.x-blue)](https://github.com/frappe/erpnext)
 [![Python](https://img.shields.io/badge/Python-3.11+-green)](https://www.python.org)
-[![Gemma 2 2B](https://img.shields.io/badge/LLM-Gemma%204%204B-orange)](https://huggingface.co)
+[![Gemma 4 E2B QAT](https://img.shields.io/badge/LLM-Gemma%204%204B-orange)](https://huggingface.co)
 
-> Three production-grade Frappe custom apps on top of upstream ERPNext v15.x that localize it for **Armenia** and the **UAE**, plus a **local LLM** (Gemma 2 2B via Ollama) AI agent layer that runs **fully offline** in HY/AR/EN.
+> Three production-grade Frappe custom apps on top of upstream ERPNext v15.x that localize it for **Armenia** and the **UAE**, plus a **local LLM** (Gemma 4 E2B QAT via Ollama) AI agent layer that runs **fully offline** in HY/AR/EN.
 
 ## Apps
 
@@ -13,7 +13,7 @@
 |---|---|---|---|
 | [`apps/frappe_armenia`](apps/frappe_armenia/)  | Armenia 🇦🇲 | planned (Phase 1) | COA, VAT 20%, profit tax 18%, e-invoice, payroll, banking, HY/EN bilingual |
 | [`apps/frappe_uae`](apps/frappe_uae/)          | UAE 🇦🇪     | planned (Phase 2) | VAT 5%, corporate tax 9%, e-invoicing (Peppol), EOSB, Arabic RTL, banking |
-| [`apps/frappe_ai_local`](apps/frappe_ai_local/) | Both      | planned (Phase 3) | Local-LLM AI agent + chat (Ollama + Gemma 2 2B), offline-capable, HY/AR/EN |
+| [`apps/frappe_ai_local`](apps/frappe_ai_local/) | Both      | planned (Phase 3) | Local-LLM AI agent + chat (Ollama + Gemma 4 E2B QAT), offline-capable, HY/AR/EN |
 
 ## Shared libraries (MIT)
 
@@ -56,7 +56,7 @@ This repo is in **Phase 0 — Foundation**. We are landing:
 - Swarm CLI (claim / release / isolation check) ✅
 - Architecture with frozen contracts A/B/C ✅
 - 3 worked-example task files ✅
-- Local LLM plan (Ollama + Gemma 2 2B) ✅
+- Local LLM plan (Ollama + Gemma 4 E2B QAT) ✅
 - AI agent integration (Claude Code, Codex) ✅
 
 Coming next: Docker dev stack, CI workflows, the three `bench new-app` scaffolds.

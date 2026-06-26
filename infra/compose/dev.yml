@@ -50,8 +50,8 @@ services:
       - ollama-data:/root/.ollama
     profiles: ["ollama"]   # opt-in: docker compose --profile ollama up
     ports:
-      - "11434:11434"   # Ollama HTTP API (gemma2:2b)
-    # 2B model runs fine on CPU; uncomment for GPU:
+      - "11434:11434"   # Ollama HTTP API (gemma4:e2b-it-qat)
+    # E2B QAT variant fits in 7.7 GB Docker memory; uncomment for GPU:
     # deploy:
     #   resources:
     #     reservations:
@@ -68,8 +68,8 @@ services:
     entrypoint: ["/bin/sh", "-c"]
     command: >
       "until curl -s http://ollama:11434/api/version >/dev/null; do sleep 2; done &&
-       echo '==> Pulling gemma2:2b (Gemma 2 2B)' &&
-       curl -X POST http://ollama:11434/api/pull -d '{\"name\":\"gemma2:2b\"}' &&
+       echo '==> Pulling gemma4:e2b-it-qat (Gemma 4 Effective 2B, QAT 4.3 GB)' &&
+       curl -X POST http://ollama:11434/api/pull -d '{\"name\":\"gemma4:e2b-it-qat\"}' &&
        echo 'done'"
 
 volumes:

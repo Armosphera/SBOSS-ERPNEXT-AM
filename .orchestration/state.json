@@ -349,14 +349,14 @@
       "status": "done"
     },
     "W1-T12": {
-      "branch": null,
-      "claimed_at": null,
-      "commit": null,
-      "completed_at": null,
+      "branch": "feat/am/w1-t12-vat-validation-hook",
+      "claimed_at": "2026-06-26T15:01:13Z",
+      "commit": "main",
+      "completed_at": "2026-06-26T22:00:00Z",
       "id": "W1-T12",
-      "owner": null,
-      "pr": null,
-      "status": "pending"
+      "owner": "agent-W1a",
+      "pr": 19,
+      "status": "done"
     },
     "W1-T13": {
       "branch": null,

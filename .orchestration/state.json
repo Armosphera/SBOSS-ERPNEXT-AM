@@ -771,12 +771,13 @@
     "W2-T12": {
       "branch": null,
       "claimed_at": "2026-06-26T19:11:58.850268+00:00",
-      "commit": null,
-      "completed_at": null,
+      "commit": "baa0689",
+      "completed_at": "2026-06-26T19:45:00+00:00",
       "id": "W2-T12",
+      "note": "direct-to-main (commit baa0689, tag w2-t12-sales-vat-hook); 9 tests pass",
       "owner": "mavis-uae",
       "pr": null,
-      "status": "claimed"
+      "status": "done"
     },
     "W2-T13": {
       "branch": null,

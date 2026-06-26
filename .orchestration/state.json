@@ -329,14 +329,14 @@
       "status": "pending"
     },
     "W1-T10": {
-      "branch": null,
-      "claimed_at": null,
-      "commit": null,
-      "completed_at": null,
+      "branch": "feat/am/w1-t10-vat-settings",
+      "claimed_at": "2026-06-26T09:49:58Z",
+      "commit": "bd460b9",
+      "completed_at": "2026-06-26T22:00:00Z",
       "id": "W1-T10",
-      "owner": null,
-      "pr": null,
-      "status": "pending"
+      "owner": "agent-W1a",
+      "pr": 13,
+      "status": "done"
     },
     "W1-T11": {
       "branch": null,

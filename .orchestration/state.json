@@ -390,13 +390,13 @@
     },
     "W1-T16": {
       "branch": null,
-      "claimed_at": null,
+      "claimed_at": "2026-06-26T18:47:50.169348+00:00",
       "commit": null,
       "completed_at": null,
       "id": "W1-T16",
-      "owner": null,
+      "owner": "mavis-am",
       "pr": null,
-      "status": "pending"
+      "status": "claimed"
     },
     "W1-T17": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-26T16:05:52.273268+00:00",
+  "updated_at": "2026-06-26T18:47:50.169511+00:00",
   "version": "0.0.1-foundation"
 }

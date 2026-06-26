@@ -204,3 +204,109 @@ def get_item_vat(item_code):
 
 __all__ = ["DOCTYPE", "get_vat_settings",
            "ITEM_VAT_FIELDS", "DEFAULT_ITEM_VAT", "get_item_vat"]
+
+
+# --- Sales Invoice VAT validation hook (W1-T12) ---
+
+# Item-level VAT field names (from W1-T11):
+AM_VAT_FIELD_STANDARD = "am_vat_standard_rate"
+AM_VAT_FIELD_EXPORT = "am_vat_export_rate"
+AM_VAT_FIELD_EXEMPT = "am_vat_exempt"
+AM_VAT_FIELD_REVERSE = "am_vat_reverse_charge"
+
+
+def expected_item_vat(net_amount, item_vat):
+    """Compute the expected VAT for a single invoice line.
+
+    Honors Armenian Tax Code Articles 65-68:
+      - Art. 65: standard-rate taxable supplies
+      - Art. 66: zero-rated exports
+      - Art. 67: exempt supplies (no VAT)
+      - Art. 68: reverse-charge imports of services
+    """
+    if int(item_vat.get(AM_VAT_FIELD_EXEMPT, 0) or 0):
+        return float(0)
+    if int(item_vat.get(AM_VAT_FIELD_REVERSE, 0) or 0):
+        # Reverse-charge: VAT is the recipient's responsibility.
+        # The invoice still shows 0; the recipient self-assesses.
+        return float(0)
+    # Choose the right rate. If the AM_VAT_FIELD_EXPORT field is
+    # present in the item_vat dict (even with value 0), use it
+    # (an item explicitly marked as export should use export rate).
+    # Otherwise fall back to the standard rate.
+    if AM_VAT_FIELD_EXPORT in item_vat:
+        rate = float(item_vat.get(AM_VAT_FIELD_EXPORT, 0.0) or 0.0)
+    else:
+        rate = float(item_vat.get(AM_VAT_FIELD_STANDARD, 20.0) or 20.0)
+    return round(float(net_amount) * rate / 100.0, 2)
+
+
+def validate_invoice_vat(doc, method=None):
+    """Validate that each line item's VAT matches Armenian Tax Code.
+
+    Registered as a doc_events hook on Sales Invoice "on_submit".
+    Raises frappe.ValidationError with a clear message if any item
+    has a VAT mismatch.
+    """
+    company = getattr(doc, "company", None)
+    if not company:
+        return
+
+    company_vat = get_vat_settings(company)
+    if company_vat is None:
+        # DocType not installed; nothing to validate yet.
+        return
+
+    company_reverse_charge_enabled = bool(
+        int(getattr(company_vat, "reverse_charge_enabled", 1) or 0)
+    )
+
+    computed_total_vat = 0.0
+
+    for idx, item in enumerate(doc.items or []):
+        item_code = getattr(item, "item_code", None)
+        if not item_code:
+            continue
+
+        item_vat = get_item_vat(item_code)
+
+        # Disallow reverse-charge items if the company has it disabled.
+        if int(item_vat.get(AM_VAT_FIELD_REVERSE, 0) or 0):
+            if not company_reverse_charge_enabled:
+                frappe.throw(
+                    f"Line {idx+1}: item {item_code!r} is marked reverse-charge "
+                    "but the company has reverse_charge_enabled=False. Either "
+                    "enable it in AM VAT Settings or remove the reverse-charge "
+                    "flag on the item."
+                )
+
+        # Validate per-item VAT.
+        net_amount = float(getattr(item, "net_amount", 0) or 0)
+        actual_vat = float(getattr(item, "tax_amount", 0) or 0)
+        expected_vat = expected_item_vat(net_amount, item_vat)
+
+        if round(actual_vat, 2) != round(expected_vat, 2):
+            rate = float(item_vat.get(AM_VAT_FIELD_STANDARD, 20.0) or 20.0)
+            frappe.throw(
+                f"Line {idx+1} ({item_code!r}): expected VAT {expected_vat} "
+                f"at {rate}% on net {net_amount}, got {actual_vat}."
+            )
+
+        computed_total_vat += expected_vat
+
+    # Validate the invoice total against the sum of per-item VATs.
+    invoice_total_vat = float(getattr(doc, "total_taxes_and_charges", 0) or 0)
+    if abs(invoice_total_vat - round(computed_total_vat, 2)) > 0.05:
+        frappe.throw(
+            f"Invoice VAT total {invoice_total_vat} does not match the sum of "
+            f"per-item VATs {round(computed_total_vat, 2)}."
+        )
+
+
+__all__ = [
+    "DOCTYPE", "get_vat_settings",
+    "ITEM_VAT_FIELDS", "DEFAULT_ITEM_VAT", "get_item_vat",
+    "AM_VAT_FIELD_STANDARD", "AM_VAT_FIELD_EXPORT",
+    "AM_VAT_FIELD_EXEMPT", "AM_VAT_FIELD_REVERSE",
+    "expected_item_vat", "validate_invoice_vat",
+]

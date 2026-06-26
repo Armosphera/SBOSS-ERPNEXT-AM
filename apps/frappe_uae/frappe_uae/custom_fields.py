@@ -84,3 +84,61 @@ def ensure_custom_fields() -> None:
     # update=True makes this an upsert: existing Custom Fields get their
     # properties refreshed, missing ones get created.
     create_custom_fields(CUSTOM_FIELDS, update=True, ignore_validate=False)
+
+
+# UAE VAT fields on the standard Item DocType (W2-T11).
+# Mirror of the Armenia fields in frappe_armenia/custom_fields.py.
+AE_VAT_STANDARD_RATE_FIELD = {
+    "fieldname": "ae_vat_standard_rate",
+    "label": "AE Standard VAT Rate",
+    "fieldtype": "Percent",
+    "insert_after": "taxes",
+    "default": "5",
+    "description": "Standard VAT rate for this item (UAE Federal Tax Authority: 5%).",
+    "depends_on": "",
+    "read_only": 0,
+    "hidden": 0,
+}
+AE_VAT_EXPORT_RATE_FIELD = {
+    "fieldname": "ae_vat_export_rate",
+    "label": "AE Export VAT Rate",
+    "fieldtype": "Percent",
+    "insert_after": "ae_vat_standard_rate",
+    "default": "0",
+    "description": "VAT rate applied to exports of this item (typically 0%).",
+    "depends_on": "",
+    "read_only": 0,
+    "hidden": 0,
+}
+AE_VAT_EXEMPT_FIELD = {
+    "fieldname": "ae_vat_is_exempt",
+    "label": "AE VAT Exempt",
+    "fieldtype": "Check",
+    "insert_after": "ae_vat_export_rate",
+    "default": "0",
+    "description": "Whether this item is exempt from VAT under UAE Federal Decree-Law No. 8 of 2017 Article 46.",
+    "depends_on": "",
+    "read_only": 0,
+    "hidden": 0,
+}
+AE_VAT_REVERSE_CHARGE_FIELD = {
+    "fieldname": "ae_vat_reverse_charge",
+    "label": "AE VAT Reverse Charge",
+    "fieldtype": "Check",
+    "insert_after": "ae_vat_is_exempt",
+    "default": "0",
+    "description": "Whether reverse-charge VAT applies to this item.",
+    "depends_on": "",
+    "read_only": 0,
+    "hidden": 0,
+}
+
+# Mirror of the W1-T11 Armenia pattern: UAE Item VAT fields registered
+# on the standard Item DocType. Site install / migrate reads CUSTOM_FIELDS
+# via the custom_fields hook in hooks.py.
+CUSTOM_FIELDS["Item"] = [
+    AE_VAT_STANDARD_RATE_FIELD,
+    AE_VAT_EXPORT_RATE_FIELD,
+    AE_VAT_EXEMPT_FIELD,
+    AE_VAT_REVERSE_CHARGE_FIELD,
+]

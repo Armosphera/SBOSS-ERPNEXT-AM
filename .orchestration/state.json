@@ -1650,13 +1650,13 @@
     },
     "W4-T04": {
       "branch": null,
-      "claimed_at": null,
+      "claimed_at": "2026-06-26T05:51:19.792687+00:00",
       "commit": null,
-      "completed_at": null,
+      "completed_at": "2026-06-26T06:04:47.563284+00:00",
       "id": "W4-T04",
-      "owner": null,
-      "pr": null,
-      "status": "pending"
+      "owner": "samvelstepanyan",
+      "pr": 12,
+      "status": "done"
     },
     "W4-T05": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-25T11:09:57.005552+00:00",
+  "updated_at": "2026-06-26T06:04:47.563450+00:00",
   "version": "0.0.1-foundation"
 }

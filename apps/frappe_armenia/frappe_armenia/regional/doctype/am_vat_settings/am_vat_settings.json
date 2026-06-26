@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "creation": "2026-06-26 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "section_break_default_rates",
+  "default_vat_rate",
+  "export_vat_rate",
+  "section_break_advanced",
+  "exempt_categories",
+  "reverse_charge_account",
+  "reverse_charge_enabled",
+  "section_break_period",
+  "vat_period",
+  "vat_authority",
+  "section_break_einvoicing",
+  "e_invoice_provider",
+  "mandatory_e_invoicing_threshold_amd"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_default_rates",
+   "fieldtype": "Section Break",
+   "label": "VAT Rates"
+  },
+  {
+   "fieldname": "default_vat_rate",
+   "fieldtype": "Percent",
+   "label": "Default VAT Rate",
+   "default": "20",
+   "reqd": 1,
+   "description": "Standard VAT rate applied to taxable supplies (Armenian Tax Code: 20%)"
+  },
+  {
+   "fieldname": "export_vat_rate",
+   "fieldtype": "Percent",
+   "label": "Export VAT Rate",
+   "default": "0",
+   "description": "VAT rate applied to exports (typically 0% under Armenian Tax Code)"
+  },
+  {
+   "fieldname": "section_break_advanced",
+   "fieldtype": "Section Break",
+   "label": "Advanced"
+  },
+  {
+   "fieldname": "exempt_categories",
+   "fieldtype": "Text",
+   "label": "Exempt Categories",
+   "description": "One per line. Categories of supply that are exempt from VAT under Armenian Tax Code Article 56."
+  },
+  {
+   "fieldname": "reverse_charge_account",
+   "fieldtype": "Data",
+   "label": "Reverse Charge Account",
+   "description": "Account code for reverse-charge VAT (Article 59 of Armenian Tax Code)"
+  },
+  {
+   "fieldname": "reverse_charge_enabled",
+   "fieldtype": "Check",
+   "label": "Reverse Charge Enabled",
+   "default": "1",
+   "description": "Whether reverse-charge VAT applies to imported services"
+  },
+  {
+   "fieldname": "section_break_period",
+   "fieldtype": "Section Break",
+   "label": "Filing Period"
+  },
+  {
+   "fieldname": "vat_period",
+   "fieldtype": "Select",
+   "label": "VAT Period",
+   "options": "Monthly\nQuarterly",
+   "default": "Monthly",
+   "description": "How often the company files VAT returns with the State Revenue Committee"
+  },
+  {
+   "fieldname": "vat_authority",
+   "fieldtype": "Data",
+   "label": "VAT Authority",
+   "default": "State Revenue Committee of Armenia"
+  },
+  {
+   "fieldname": "section_break_einvoicing",
+   "fieldtype": "Section Break",
+   "label": "E-Invoicing"
+  },
+  {
+   "fieldname": "e_invoice_provider",
+   "fieldtype": "Select",
+   "label": "E-Invoice Provider",
+   "options": "None\nTaxNet-Armenia\nPosService",
+   "default": "TaxNet-Armenia"
+  },
+  {
+   "fieldname": "mandatory_e_invoicing_threshold_amd",
+   "fieldtype": "Currency",
+   "label": "Mandatory E-Invoicing Threshold (AMD)",
+   "default": "10000000",
+   "description": "Companies with turnover above this threshold must submit e-invoices"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-06-26 10:00:00.000000",
+ "module": "armenia",
+ "name": "AM VAT Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "custom": 1
+}

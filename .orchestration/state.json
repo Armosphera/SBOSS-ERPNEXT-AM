@@ -372,11 +372,11 @@
       "branch": null,
       "claimed_at": null,
       "commit": null,
-      "completed_at": null,
+      "completed_at": "2026-06-26T19:09:25.753975+00:00",
       "id": "W1-T14",
       "owner": null,
-      "pr": null,
-      "status": "pending"
+      "pr": 25,
+      "status": "done"
     },
     "W1-T15": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-26T18:52:05.343388+00:00",
+  "updated_at": "2026-06-26T19:09:25.754142+00:00",
   "version": "0.0.1-foundation"
 }

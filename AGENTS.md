@@ -12,7 +12,7 @@ production-grade Frappe custom apps on top of upstream ERPNext v15.x:
 |---|---|---|
 | `apps/frappe_armenia` | Armenia | COA, VAT 20%, profit tax 18%, e-invoice, payroll, banking, HY/EN bilingual |
 | `apps/frappe_uae`     | UAE     | VAT 5%, corporate tax 9%, e-invoicing (Peppol), EOSB, Arabic RTL, banking |
-| `apps/frappe_ai_local` | Both  | Local-LLM AI agent + chat (Ollama + Gemma 4 4B), offline-capable, HY/AR/EN |
+| `apps/frappe_ai_local` | Both  | Local-LLM AI agent + chat (Ollama + Gemma 4 E2B / Gemma 2 2B), offline-capable, HY/AR/EN |
 
 Two shared libraries under `libs/` (MIT):
 - `frappe_localization_core` — country-agnostic helpers (number-to-words, IBAN, ISO20022, MT940, currency)
@@ -136,3 +136,25 @@ before starting are:
 - Tax references: `docs/tax-references/`
 - Frappe docs: https://docs.frappe.io/framework
 - ERPNext docs: https://docs.frappe.io/erpnext
+
+## Ollama model selectability
+
+The dev stack keeps two Gemma models pulled in `compose-ollama-1` so the
+active model is a config flip, not a re-pull:
+
+| Model tag        | Size  | Speed  | Quality  |
+|------------------|-------|--------|----------|
+| `gemma4:e2b`     | 7.2 GB | slower | higher   |
+| `gemma2:2b`      | 1.6 GB | faster | lower    |
+
+Default is `gemma4:e2b`. Site Config key: `ollama_default_model`.
+Switch with:
+
+```bash
+bash infra/scripts/ollama-switch.sh gemma2:2b   # faster, smaller
+bash infra/scripts/ollama-switch.sh gemma4:e2b   # back to default
+```
+
+No container restart needed — the Ollama client (W3-T01) reads this key on
+every call. To add a new model: append it to the `command:` block in
+`infra/compose/dev.yml`'s `ollama-pull` service and re-up that container.

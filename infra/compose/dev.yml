@@ -59,17 +59,23 @@ services:
     #           count: all
     #           capabilities: [gpu]
 
-  ollama-pull:
+ollama-pull:
     image: curlimages/curl:latest
     profiles: ["ollama"]   # opt-in
     depends_on:
       - ollama
     entrypoint: ["/bin/sh", "-c"]
+    # Pulls a curated set of models so the user can switch between them
+    # via Site Config `ollama_default_model` without re-running this
+    # container. Both models are kept warm in the Ollama daemon.
     command: >
       "until curl -s http://ollama:11434/api/version >/dev/null; do sleep 2; done &&
-       echo '==> Pulling gemma4:4b (Gemma 4 4B GGUF)' &&
-       curl -X POST http://ollama:11434/api/pull -d '{\"name\":\"gemma4:4b\"}' &&
-       echo 'done'"
+       echo '==> Pulling gemma4:e2b (Gemma 4 Effective 2B, Q4_K_M 7.2 GB)' &&
+       curl -X POST http://ollama:11434/api/pull -d '{\"name\":\"gemma4:e2b\"}' &&
+       echo 'done' &&
+       echo '==> Pulling gemma2:2b (Gemma 2 2B, Q4_0 1.6 GB)' &&
+       curl -X POST http://ollama:11434/api/pull -d '{\"name\":\"gemma2:2b\"}' &&
+       echo 'all-done'"
 
 volumes:
   mariadb-data:

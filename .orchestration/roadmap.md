@@ -72,7 +72,7 @@
 
 | Workstream | Tasks |
 |---|---|
-| W3.a AI infra (Ollama + Gemma 4 4B) | W3-T01..T07 |
+| W3.a AI infra (Ollama + Gemma 2 2B) | W3-T01..T07 |
 | W3.b Agent tools (8+ Frappe tools) | W3-T10..T20 |
 | W3.c RAG (ChromaDB + multilingual embeddings) | W3-T30..T35 |
 | W3.d Chat widget | W3-T40..T46 |

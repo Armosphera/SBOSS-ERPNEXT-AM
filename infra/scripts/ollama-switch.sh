@@ -38,8 +38,8 @@ if ! docker exec compose-ollama-1 ollama list 2>/dev/null | awk 'NR>1 {print $1}
 fi
 
 # Read old value (best-effort).
-OLD_MODEL=$(docker exec compose-bench-1 cat /workspace/frappe-bench/sites/common_site_config.json 2>/dev/null \
-    | python3 -c 'import json,sys; print(json.load(sys.stdin).get("ollama_default_model","(unset — defaults to gemma4:e2b)"))' \
+OLD_MODEL=$(docker exec compose-bench-1 /workspace/frappe-bench/env/bin/python -c \
+    'import json; print(json.load(open("/workspace/frappe-bench/sites/common_site_config.json")).get("ollama_default_model","(unset — defaults to gemma4:e2b)"))' \
     2>/dev/null || echo "(unset — defaults to gemma4:e2b)")
 
 # Update via bench.

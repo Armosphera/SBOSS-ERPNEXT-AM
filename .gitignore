@@ -59,3 +59,4 @@ htmlcov/
 *.crt
 secrets/
 .gstack/
+.libs-installed

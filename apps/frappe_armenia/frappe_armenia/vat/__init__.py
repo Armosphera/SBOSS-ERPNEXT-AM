@@ -163,3 +163,44 @@ def get_vat_settings(company: str) -> Any:
 
 
 __all__ = ["DOCTYPE", "get_vat_settings"]
+
+
+# --- Item-level VAT fields (W1-T11) ---
+
+ITEM_VAT_FIELDS = (
+    "am_vat_standard_rate",
+    "am_vat_export_rate",
+    "am_vat_exempt",
+    "am_vat_reverse_charge",
+)
+
+DEFAULT_ITEM_VAT = {
+    "am_vat_standard_rate": 20.0,
+    "am_vat_export_rate": 0.0,
+    "am_vat_exempt": 0,
+    "am_vat_reverse_charge": 0,
+}
+
+
+def get_item_vat(item_code):
+    """Return the Armenian VAT fields for item_code.
+
+    Uses safe defaults if the Item doesn't exist or the custom fields
+    aren't populated yet.
+    """
+    result = dict(DEFAULT_ITEM_VAT)
+    if not frappe.db.exists("Item", item_code):
+        return result
+    row = frappe.db.get_value(
+        "Item", item_code, list(ITEM_VAT_FIELDS), as_dict=True,
+    ) or {}
+    for k in ITEM_VAT_FIELDS:
+        v = row.get(k)
+        if v is None:
+            continue
+        result[k] = v
+    return result
+
+
+__all__ = ["DOCTYPE", "get_vat_settings",
+           "ITEM_VAT_FIELDS", "DEFAULT_ITEM_VAT", "get_item_vat"]

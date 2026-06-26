@@ -1679,14 +1679,14 @@
       "status": "pending"
     },
     "W4-T07": {
-      "branch": null,
-      "claimed_at": null,
-      "commit": null,
-      "completed_at": null,
+      "branch": "feat/libs/w4-t07-currency-integration",
+      "claimed_at": "2026-06-26T19:17:44Z",
+      "commit": "298fb4c",
+      "completed_at": "2026-06-26T22:00:00Z",
       "id": "W4-T07",
-      "owner": null,
-      "pr": null,
-      "status": "pending"
+      "owner": "agent-W4-T07-07",
+      "pr": 20,
+      "status": "done"
     },
     "W4-T08": {
       "branch": null,

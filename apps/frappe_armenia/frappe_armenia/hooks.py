@@ -38,11 +38,16 @@ doc_events = {
 }
 
 
-# Document-event hooks (W1-T12).
+# Document-event hooks (W1-T12 + W1-T14).
 # On Sales Invoice submit, validate each line item's VAT against the
 # Armenian Tax Code Articles 65-68.
+# On Purchase Invoice submit, validate each line item's INPUT VAT
+# against Articles 65-69.
 doc_events = {
     "Sales Invoice": {
         "on_submit": "frappe_armenia.vat.validate_invoice_vat",
+    },
+    "Purchase Invoice": {
+        "on_submit": "frappe_armenia.vat.validate_purchase_invoice_vat",
     },
 }

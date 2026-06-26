@@ -759,14 +759,14 @@
       "status": "done"
     },
     "W2-T11": {
-      "branch": null,
-      "claimed_at": null,
-      "commit": null,
-      "completed_at": null,
+      "branch": "feat/uae/w2-t11-item-vat-template",
+      "claimed_at": "2026-06-26T15:01:13Z",
+      "commit": "main",
+      "completed_at": "2026-06-26T22:00:00Z",
       "id": "W2-T11",
-      "owner": null,
-      "pr": null,
-      "status": "pending"
+      "owner": "agent-W2a",
+      "pr": 18,
+      "status": "done"
     },
     "W2-T12": {
       "branch": null,

@@ -382,11 +382,11 @@
       "branch": null,
       "claimed_at": "2026-06-26T15:56:41.375357+00:00",
       "commit": null,
-      "completed_at": null,
+      "completed_at": "2026-06-26T16:05:52.273086+00:00",
       "id": "W1-T15",
       "owner": "mavis-am",
-      "pr": null,
-      "status": "claimed"
+      "pr": 21,
+      "status": "done"
     },
     "W1-T16": {
       "branch": null,
@@ -2119,6 +2119,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-26T15:56:41.375524+00:00",
+  "updated_at": "2026-06-26T16:05:52.273268+00:00",
   "version": "0.0.1-foundation"
 }

@@ -45,4 +45,7 @@ doc_events = {
     "Sales Invoice": {
         "on_submit": "frappe_armenia.vat.validate_invoice_vat",
     },
+    "Purchase Invoice": {
+        "on_submit": "frappe_armenia.vat.validate_purchase_invoice_vat",
+    },
 }

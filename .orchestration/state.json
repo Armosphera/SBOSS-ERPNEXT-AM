@@ -781,13 +781,14 @@
     },
     "W2-T13": {
       "branch": null,
-      "claimed_at": null,
-      "commit": null,
-      "completed_at": null,
+      "claimed_at": "2026-06-27T02:57:46.360307+00:00",
+      "commit": "ec6561e12e732b7c20280508446213541f9c01d8",
+      "completed_at": "2026-06-27T03:00:00+00:00",
       "id": "W2-T13",
-      "owner": null,
+      "note": "direct-to-branch (feat/uae/w2-t13-ae-vat-201); 10 tests pass + collateral rename fix",
+      "owner": "samvelstepanyan",
       "pr": null,
-      "status": "pending"
+      "status": "done"
     },
     "W2-T14": {
       "branch": null,
@@ -2120,6 +2121,6 @@
       "status": "pending"
     }
   },
-  "updated_at": "2026-06-26T19:11:58.850459+00:00",
+  "updated_at": "2026-06-27T02:57:46.360499+00:00",
   "version": "0.0.1-foundation"
 }

@@ -173,7 +173,7 @@ def _ensure_table() -> None:
     frappe.cache.delete_value("db_tables")
 
 
-def get_ae_vat_settings(company: str) -> Any:
+def get_vat_settings(company: str) -> Any:
     """Return the AEVATSettings doc for ``company``, creating one with
     spec defaults if none exists. Returns the Document instance, or None
     if the DocType is not installed on this site yet.
@@ -234,7 +234,7 @@ def validate_sales_invoice_vat_uae(doc, method=None):
     if not company:
         return
 
-    company_vat = get_ae_vat_settings(company)
+    company_vat = get_vat_settings(company)
     if company_vat is None:
         return
 
@@ -275,6 +275,6 @@ __all__ = [
     "AE_VAT_FIELD_STANDARD", "AE_VAT_FIELD_EXPORT",
     "AE_VAT_FIELD_EXEMPT", "AE_VAT_FIELD_REVERSE",
     "ITEM_VAT_FIELDS", "DEFAULT_ITEM_VAT", "get_item_vat",
-    "get_ae_vat_settings",
+    "get_vat_settings",
     "expected_item_vat_uae", "validate_sales_invoice_vat_uae",
 ]

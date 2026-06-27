@@ -23,7 +23,7 @@ from frappe_uae.vat import (
     AE_VAT_FIELD_REVERSE,
     AE_VAT_FIELD_STANDARD,
     expected_item_vat_uae,
-    get_ae_vat_settings,
+    get_vat_settings,
 )
 
 
@@ -236,7 +236,7 @@ class TestValidateSalesInvoiceVATUAE(FrappeTestCase):
         _wipe_invoices()
 
     def test_standard_5_percent_correct_accepted(self):
-        get_ae_vat_settings(_TEST_COMPANY)
+        get_vat_settings(_TEST_COMPANY)
         invoice = _make_invoice(item_vat={
             AE_VAT_FIELD_STANDARD: 5.0,
             AE_VAT_FIELD_EXEMPT: 0,
@@ -248,7 +248,7 @@ class TestValidateSalesInvoiceVATUAE(FrappeTestCase):
         self.assertEqual(invoice.docstatus, 1)
 
     def test_zero_rate_export_correct_accepted(self):
-        get_ae_vat_settings(_TEST_COMPANY)
+        get_vat_settings(_TEST_COMPANY)
         invoice = _make_invoice(item_vat={
             AE_VAT_FIELD_STANDARD: 0.0,
             AE_VAT_FIELD_EXEMPT: 0,
@@ -260,7 +260,7 @@ class TestValidateSalesInvoiceVATUAE(FrappeTestCase):
         self.assertEqual(invoice.docstatus, 1)
 
     def test_exempt_accepted_with_zero_tax(self):
-        get_ae_vat_settings(_TEST_COMPANY)
+        get_vat_settings(_TEST_COMPANY)
         invoice = _make_invoice(item_vat={
             AE_VAT_FIELD_STANDARD: 5.0,
             AE_VAT_FIELD_EXEMPT: 1,
@@ -272,7 +272,7 @@ class TestValidateSalesInvoiceVATUAE(FrappeTestCase):
         self.assertEqual(invoice.docstatus, 1)
 
     def test_wrong_vat_rejected(self):
-        get_ae_vat_settings(_TEST_COMPANY)
+        get_vat_settings(_TEST_COMPANY)
         invoice = _make_invoice(item_vat={
             AE_VAT_FIELD_STANDARD: 5.0,
             AE_VAT_FIELD_EXEMPT: 0,
